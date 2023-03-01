@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap');
-/* weight- öner */
-/* @font-face {
-  font-family: 'Spartan';
-  src: url('../src/assets/fonts/spartan-cufonfonts/Spartan-Thin.ttf');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+@font-face {
+  font-family: "Spartan";
+  src: url("../src/assets/fonts/spartan-cufonfonts/Spartan-Light.ttf");
   font-weight: 300;
   font-style: normal;
-} */
+}
 @font-face {
-  font-family: 'Spartan';
-  src: url('../src/assets/fonts/spartan-cufonfonts/Spartan-Medium.ttf');
+  font-family: "Spartan";
+  src: url("../src/assets/fonts/spartan-cufonfonts/Spartan-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,27 +19,29 @@
   font-style: normal;
 } */
 
-:root{
-
+:root {
   --color-primary: #ff6f00;
   --color-secondary: #415065;
+  --color-header: #181818;
   --color-white: #fff;
+  --color-border: #e5e5e5;
+  --color-body: grey;
 
-  --font-primary:'Spartan', sans-serif;
-  --font-secondary:'Poppins', sans-serif;
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Spartan", sans-serif;
 }
 
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  font-family: var(--font-primary) !important;
-} 
+  font-family: var(--font-secondary) !important;
+}
 
-ul{
+ul {
   list-style-type: none;
   margin: 0 !important;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
