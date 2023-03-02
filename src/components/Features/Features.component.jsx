@@ -17,7 +17,7 @@ const Features = () => {
             {category_contents.map((category, i) => (
               <div
                 key={i}
-                className="features-box features-style-2 features-svg-animate"
+                className="features-box features-style features-svg-animate"
               >
                 <div className="icon">{category.icon}</div>
                 <div className="content">

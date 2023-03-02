@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from '../../assets/img/alas-logo.png'
+import Logo from "../../assets/img/alas-logo.png";
 import { HeaderStyled, DropdownContent } from "./Header.styles";
 import HeaderTopBar from "../HeaderTopBar/HeaderTopBar.component";
 import { useMediaQuery } from "react-responsive";
@@ -45,11 +45,7 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      {
-            isDesktop && (
-            <HeaderTopBar/>
-          )
-      }
+      {isDesktop && <HeaderTopBar />}
 
       <div className="header-navbar">
         <div className="header-brand">
@@ -79,9 +75,11 @@ const Header = () => {
                     <li>
                       <a href="/">AI Engineering</a>
                     </li>
-                    <li>
-                      <a href="/">Blockchain Development</a>
-                    </li>
+                    {
+                      // <li>
+                      //   <a href="/">Blockchain Development</a>
+                      // </li>
+                    }
                     <li>
                       <a href="/">Data Science</a>
                     </li>
@@ -123,11 +121,12 @@ const Header = () => {
         setIsSearchOpen={setIsSearchOpen}
       />
 
-      {
-        !isDesktopXl && (
-            <Offcanvas isOffcanvasOpen={isOffcanvasOpen} setIsOffcanvasOpen={setIsOffcanvasOpen}/>
-        )
-      }
+      {!isDesktopXl && (
+        <Offcanvas
+          isOffcanvasOpen={isOffcanvasOpen}
+          setIsOffcanvasOpen={setIsOffcanvasOpen}
+        />
+      )}
     </HeaderStyled>
   );
 };

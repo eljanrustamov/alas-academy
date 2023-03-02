@@ -51,7 +51,7 @@ export const FeaturesStyled = styled.div`
         }
       }
 
-      &.features-style-2 {
+      &.features-style {
         background-color: transparent;
         box-shadow: none;
         display: flex;
