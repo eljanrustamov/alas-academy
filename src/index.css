@@ -26,6 +26,11 @@
   --color-white: #fff;
   --color-border: #e5e5e5;
   --color-body: grey;
+  --bg-color:#EAF0F2;
+  --layout-lg:1119px;
+  --layout-md:991px;
+  --layout-sm:767px;
+
 
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Spartan", sans-serif;
