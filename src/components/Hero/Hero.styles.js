@@ -4,6 +4,7 @@ export const HeroStyled = styled.div`
   min-height: 660px;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 
   @media (max-width: 1119px) {
     min-height: 600px;

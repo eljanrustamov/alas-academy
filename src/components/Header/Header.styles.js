@@ -18,6 +18,14 @@ export const HeaderStyled = styled.div`
         img{
             max-height: 45px;
         }
+
+        @media (max-width:326px){
+          margin-right: 30px;
+
+          img{
+            max-height: 35px;
+          }
+        }
       }
     }
 
