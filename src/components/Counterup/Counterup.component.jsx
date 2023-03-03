@@ -1,6 +1,8 @@
 import React from "react";
 import { CounterupStyled } from "./Counterup.styles";
 import Counter from "../Counter/Counter.component";
+import { Player } from "@lottiefiles/react-lottie-player";
+import RocketAnim from "../../assets/img/rocket.json";
 
 const counter_data = [
   {
@@ -32,14 +34,13 @@ const counter_data = [
 ];
 
 const Counterup = () => {
-
-  console.log(counter_data[0].number)
+  console.log(counter_data[0].number);
 
   return (
     <CounterupStyled>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-8">
+          <div className="col-lg-8 position-relative">
             <div className="counterup-box-wrap">
               <div className="counterup-box">
                 {counter_data.slice(0, 2).map((el, i) => (
@@ -58,7 +59,7 @@ const Counterup = () => {
                 ))}
               </div>
               <div className="counterup-box">
-                {counter_data.slice(2,4).map((el, i) => (
+                {counter_data.slice(2, 4).map((el, i) => (
                   <div key={i} className="counterup">
                     <h2 className={`counter-item ${el.color}`}>
                       <span className="odometer">
@@ -74,6 +75,13 @@ const Counterup = () => {
                 ))}
               </div>
             </div>
+            <Player
+              autoplay
+              loop
+              src={RocketAnim}
+              style={{ height: "250px", width: "250px" }}
+              className="rocket-anim"
+            ></Player>
           </div>
         </div>
       </div>
@@ -82,13 +90,3 @@ const Counterup = () => {
 };
 
 export default Counterup;
-
-// <div className="counterup">
-//                   <h2 className="counter-item">
-//                     <span className="odometer">
-//                       <span>99.9</span>
-//                       <span>K</span>
-//                     </span>
-//                   </h2>
-//                   <h6 className="title">Student Enrolled</h6>
-//                 </div>

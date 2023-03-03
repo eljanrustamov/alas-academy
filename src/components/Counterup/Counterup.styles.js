@@ -76,4 +76,12 @@ export const CounterupStyled = styled.div`
       }
     }
   }
+
+  .rocket-anim{
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    transform: rotate(-45deg);
+    z-index:1;
+  }
 `;
