@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
 
 @font-face {
   font-family: "Spartan";
@@ -12,25 +12,29 @@
   font-weight: normal;
   font-style: normal;
 }
-/* @font-face {
+@font-face {
   font-family: 'Spartan';
   src: url('../src/assets/fonts/spartan-cufonfonts/Spartan-Bold.ttf');
   font-weight: bold;
   font-style: normal;
-} */
+}
 
 :root {
   --color-primary: #ff6f00;
   --color-secondary: #415065;
   --color-header: #181818;
   --color-white: #fff;
+  --color-extra-1: #1ab69d;
+  --color-extra-2: #8e56ff;
+
   --color-border: #e5e5e5;
   --color-body: grey;
-  --bg-color:#EAF0F2;
-  --layout-lg:1119px;
-  --layout-md:991px;
-  --layout-sm:767px;
+  --color-body-2: #f0f4f5;
+  --bg-color: #eaf0f2;
 
+  --layout-lg: 1119px;
+  --layout-md: 991px;
+  --layout-sm: 767px;
 
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Spartan", sans-serif;
@@ -52,6 +56,6 @@ a {
   text-decoration: none !important;
 }
 
-p{
+p {
   margin-bottom: 0 !important;
 }

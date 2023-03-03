@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const CoursesStyled = styled.div`
-  height: 600px;
+  /* height: 600px; */
   padding: 115px 0 120px;
+  background-color: var(--color-body-2);
 
   .section-title {
     display: flex;

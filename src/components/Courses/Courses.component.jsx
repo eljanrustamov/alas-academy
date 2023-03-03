@@ -7,8 +7,9 @@ import { MdSecurity } from "react-icons/md";
 import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
 
 const category_contents = {
-  title: "Top Categories",
-  text: "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore",
+  title: "Kurslarımız",
+  subtitle:
+    "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore",
   category_items: [
     {
       delay: "50",
@@ -50,28 +51,23 @@ const category_contents = {
   ],
 };
 
-const { title, text, category_items } = category_contents;
+const { title, subtitle, category_items } = category_contents;
 
 const Courses = () => {
   return (
     <CoursesStyled>
       <div className="container">
-        <div className="section-title">
-          <h2 className="title">Kurslarımız</h2>
+        <div className="section-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+          <h2 className="title">{title}</h2>
           <span className="shape-line"></span>
-          <p className="subtitle">
-            Consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-            labore et dolore
-          </p>
+          <p className="subtitle">{subtitle}</p>
         </div>
 
         <div className="row g-5">
           {category_items.map((item) => (
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6" data-sal-delay={item.delay} data-sal="slide-up" data-sal-duration="800">
               <div className={`course-item ${item.color}`}>
-                <div className="icon">
-                {item.icon}
-                </div>
+                <div className="icon">{item.icon}</div>
                 <div className="content">
                   <a href="/">{item.title}</a>
                 </div>
