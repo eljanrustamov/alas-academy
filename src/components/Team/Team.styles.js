@@ -5,6 +5,10 @@ export const TeamStyled = styled.div`
   overflow-x:hidden;
 
   .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-bottom: 44px;
 

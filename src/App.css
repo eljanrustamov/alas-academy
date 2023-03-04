@@ -10,6 +10,14 @@ body{
 }
 
 
+.shape-line{
+  width: 10%;
+  height: 5px;
+  background-color: var(--color-primary);
+  justify-self: center;
+  border-radius: 8px;
+}
+
 /* common */
 
 .color-fb{

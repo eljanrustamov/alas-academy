@@ -153,6 +153,8 @@ const Team = () => {
         <div className="section-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
           <span className="pre-title">Instructors</span>
           <h2 className="title">Course Instructors</h2>
+          <div className="shape-line"></div>
+
         </div>
 
         <div className="row g-5">

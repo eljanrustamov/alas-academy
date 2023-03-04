@@ -86,6 +86,10 @@ export const HeroStyled = styled.div`
         border-radius: 10px;
         padding: 26px 30px 16px;
         box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+
+        @media (max-width:326px){
+          padding: 15px 10px 10px;
+        }
         .title {
           margin-bottom: 5px;
         }

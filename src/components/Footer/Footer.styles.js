@@ -5,6 +5,7 @@ export const FooterStyled = styled.div`
     position: relative;
     padding: 100px 0 95px;
     background-color: #F0F4F5;
+    overflow-x: hidden;
     .footer-widget {
       font-size: 15px;
       font-family: var(--font-primary);
