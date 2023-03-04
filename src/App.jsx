@@ -9,6 +9,7 @@ import Header from './components/Header/Header.component.jsx'
 import Hero from './components/Hero/Hero.component';
 import Partners from './components/Partners/Partners.component';
 import Team from './components/Team/Team.component';
+import Testimonials from './components/Testimonials/Testimonials.component';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Team/>
       <CtaArea/>
       <About/>
+      <Testimonials/>
       <Footer/>
     </div>
   );

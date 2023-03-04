@@ -6,6 +6,7 @@ import { BsClipboardData } from "react-icons/bs";
 import { MdSecurity } from "react-icons/md";
 import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
 
+
 const category_contents = {
   title: "Kurslarımız",
   subtitle:
@@ -54,6 +55,8 @@ const category_contents = {
 const { title, subtitle, category_items } = category_contents;
 
 const Courses = () => {
+
+
   return (
     <CoursesStyled>
       <div className="container">

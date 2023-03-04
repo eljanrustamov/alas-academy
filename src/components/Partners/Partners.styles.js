@@ -40,4 +40,18 @@ export const PartnersStyled = styled.div`
       height: auto;
     }
   }
+
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+        height: 7px;
+        width: 7px;
+        background-color: rgba(255, 111, 0, 0.3);
+        opacity: 1;
+        margin: 0 8px !important;
+        &.swiper-pagination-bullet-active {
+            background-color: rgba(255, 111, 0, 0.1);
+        }
+    }
+}
 `;

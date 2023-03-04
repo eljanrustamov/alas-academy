@@ -75,10 +75,10 @@ const Footer = () => {
                     Enter your email address to register to our newsletter
                     subscription
                   </p>
-                  <div class="input-group footer-subscription-form">
+                  <div className="input-group footer-subscription-form">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Emailiniz..."
                     />
                     <CustomButton type="button">Abunə ol</CustomButton>

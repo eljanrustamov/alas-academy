@@ -150,12 +150,6 @@ export const AboutStyled = styled.div`
       text-align: left;
 
       .pre-title {
-        font-size: 15px;
-        font-family: var(--font-primary);
-        color: var(--color-body);
-        font-weight: 400;
-        display: inline-block;
-        text-transform: uppercase;
         margin-bottom: 14px;
         letter-spacing: 1px;
       }
