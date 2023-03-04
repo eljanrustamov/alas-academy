@@ -18,7 +18,8 @@ export const CounterupStyled = styled.div`
 
   .counterup-box-wrap {
     background-color: var(--color-white);
-    box-shadow: 0px 30px 70px 0px rgb(16 12 47 / 8%);
+    box-shadow: 0 30px 70px 0 rgba(16, 12, 47, 0.3);
+
     border-radius: 10px;
     position: relative;
     padding: 70px;
@@ -72,6 +73,20 @@ export const CounterupStyled = styled.div`
           font-size: 13px;
           text-transform: uppercase;
           font-weight: normal;
+        }
+      }
+
+      @media (max-width: 479px) {
+        grid-template-columns: repeat(1, 1fr);
+        &:first-child {
+          border-bottom: none;
+        }
+
+        .counterup{
+          padding: 25px;
+          &:first-child{
+            border-right: none;
+          }
         }
       }
     }

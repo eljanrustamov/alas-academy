@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TeamStyled = styled.div`
   padding: 80px 0 112px;
+  overflow-x:hidden;
 
   .section-title {
     text-align: center;
@@ -21,4 +22,6 @@ export const TeamStyled = styled.div`
         font-weight: 700;
     }
   }
+
+
 `;

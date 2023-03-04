@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.div`
+  overflow-x: hidden;
   .header-navbar {
     display: flex;
     justify-content: space-between;
@@ -15,14 +16,14 @@ export const HeaderStyled = styled.div`
     .header-brand {
       .logo {
         margin-right: 40px;
-        img{
-            max-height: 45px;
+        img {
+          max-height: 45px;
         }
 
-        @media (max-width:326px){
+        @media (max-width: 326px) {
           margin-right: 30px;
 
-          img{
+          img {
             max-height: 35px;
           }
         }
@@ -33,7 +34,7 @@ export const HeaderStyled = styled.div`
       display: flex;
       flex: 1 1;
 
-      @media (max-width:1350px){
+      @media (max-width: 1350px) {
         justify-content: center;
       }
 
@@ -80,26 +81,24 @@ export const HeaderStyled = styled.div`
     }
 
     .header-right {
-        display: flex;
-        li{
-            padding: 0 15px;
-            line-height: 90px;
-            cursor: pointer;
-            transition: 0.3s all;
+      display: flex;
+      li {
+        padding: 0 15px;
+        line-height: 90px;
+        cursor: pointer;
+        transition: 0.3s all;
 
-            &:hover{
-                color: var(--color-primary);
-            }
+        &:hover {
+          color: var(--color-primary);
         }
+      }
     }
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 `;
-
-
 
 export const DropdownContent = styled.ul`
   width: 290px !important;

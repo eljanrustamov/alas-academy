@@ -39,8 +39,8 @@ const Counterup = () => {
   return (
     <CounterupStyled>
       <div className="container">
-        <div className="row justify-content-center p-5">
-          <div className="col-lg-8 position-relative p-5">
+        <div className="row justify-content-center py-5">
+          <div className="col-12 col-lg-8 position-relative py-5">
             <div className="counterup-box-wrap">
               <div className="counterup-box">
                 {counter_data.slice(0, 2).map((el, i) => (

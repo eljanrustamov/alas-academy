@@ -9,7 +9,7 @@ const instructors_data = [
     id: 1,
     img: "../../assets/img/team-01.webp",
     social_links: [
-      { link: "http://facebook.com", target: "_blank", icon: <FaFacebookF size={18}size={18}/> },
+      { link: "http://facebook.com", target: "_blank", icon: <FaFacebookF size={18}/> },
       { link: "http://twitter.com", target: "_blank", icon: <FaTwitter size={18}/> },
       {
         link: "https://www.linkedin.com/",
