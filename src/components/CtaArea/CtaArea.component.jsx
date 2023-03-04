@@ -7,7 +7,7 @@ const CtaArea = () => {
     <CtaAreaStyled>
         <div className='row justify-content-center'>
             <div className='col-lg-5'>
-                <div className='section-title'>
+                <div className='section-title' data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <h2 className='title'>
                     Get Your Quality Skills <span>Certificate</span> Through Alas Academy
                     </h2>

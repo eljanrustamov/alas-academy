@@ -3,14 +3,21 @@ import styled from "styled-components";
 export const HeroStyled = styled.div`
   min-height: 660px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  position: relative;
+  background-color: var(--bg-color);
   overflow-x: hidden;
+  z-index: -1;
 
   @media (max-width: 1119px) {
     min-height: 600px;
   }
   @media (max-width: 991px) {
     min-height: 100%;
+    padding-top: 95px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 75px;
   }
 
   .banner-content {
@@ -47,6 +54,7 @@ export const HeroStyled = styled.div`
       color: var(--color-header);
       font-size: 18px;
       font-family: var(--font-primary);
+      margin-bottom: 24px !important;
     }
   }
 
@@ -88,7 +96,7 @@ export const HeroStyled = styled.div`
           }
           .content {
             line-height: 1;
-            color: var(--color-heading);
+            color: var(--color-header);
             margin-top: 10px;
             font-family: var(--font-primary);
             font-size: 15px !important;
@@ -101,23 +109,6 @@ export const HeroStyled = styled.div`
           }
         }
       }
-    }
-  }
-
-  &.hero-style-1 {
-    align-items: flex-end;
-    position: relative;
-    background-color: var(--bg-color);
-    z-index:-1;
-    
-
-    @media (max-width: 991px) {
-      padding-top: 95px;
-    }
-    @media (max-width: 767px) {
-      padding-top: 75px;
-    }
-    .banner-content {
     }
   }
 `;

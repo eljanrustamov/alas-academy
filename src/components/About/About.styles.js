@@ -14,72 +14,6 @@ export const AboutStyled = styled.div`
       border-radius: 10px;
     }
 
-    /* .video-box {
-      position: absolute;
-      top: 0;
-      right: 40px;
-      .inner {
-        padding: 20px;
-        background-color: var(--color-white);
-        border-radius: 10px;
-        box-shadow: 0px 40px 70px rgb(27 20 78 / 10%);
-
-        .thumb {
-          position: relative;
-          text-align: center;
-          img {
-            border-radius: 6px;
-          }
-
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-
-            transform: translateY(-50%);
-
-            margin: 0 auto;
-            height: 60px;
-            width: 60px;
-            line-height: 62px;
-            border-radius: 50%;
-            color: var(--color-primary);
-            background-color: var(--color-white);
-            font-size: 18px;
-            cursor: pointer;
-          }
-
-          svg {
-            margin-left: 5px;
-          }
-        }
-
-        .loading-bar {
-          margin: -20px 0;
-          padding-top: 20px;
-
-          span {
-            display: block;
-            height: 7px;
-            background-color: #eaf0f2;
-            border-radius: 10px;
-            margin: 20px 0;
-
-            &:first-child {
-              width: 80%;
-            }
-            &:nth-child(2n) {
-              width: 45%;
-            }
-          }
-        }
-      }
-    } */
-
     .video-box {
       position: absolute;
       top: 0;
@@ -100,6 +34,9 @@ export const AboutStyled = styled.div`
             border-radius: 6px;
           }
           .popup-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -112,7 +49,7 @@ export const AboutStyled = styled.div`
             line-height: 62px;
             background-color: var(--color-white);
             border-radius: 50%;
-            color: var(--color-secondary);
+            color: var(--color-primary);
             font-size: 18px;
             i {
               margin-left: 5px;
@@ -124,6 +61,26 @@ export const AboutStyled = styled.div`
           }
         }
       }
+
+      .loading-bar {
+          margin: -20px 0;
+          padding-top: 20px;
+
+          span {
+            display: block;
+            height: 7px;
+            background-color: #eaf0f2;
+            border-radius: 10px;
+            margin: 20px 0;
+
+            &:first-child {
+              width: 80%;
+            }
+            &:nth-child(2n) {
+              width: 45%;
+            }
+          }
+        }
     }
 
     .award-status {
@@ -174,6 +131,13 @@ export const AboutStyled = styled.div`
             color: var(--color-body);
           }
         }
+      }
+
+      &.bounce-slide{
+        animation-duration: 2.5s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-name: bounceSlide;
       }
     }
   }
@@ -237,4 +201,24 @@ export const AboutStyled = styled.div`
       }
     }
   }
+
+
+  @keyframes bounceSlide {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
 `;
+
+

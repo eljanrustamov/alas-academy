@@ -65,7 +65,7 @@ const Courses = () => {
 
         <div className="row g-5">
           {category_items.map((item) => (
-            <div className="col-lg-4 col-md-6" data-sal-delay={item.delay} data-sal="slide-up" data-sal-duration="800">
+            <div className="col-lg-4 col-md-6" data-sal-delay={item.delay} data-sal="slide-up" data-sal-duration="800" key={item.title}>
               <div className={`course-item ${item.color}`}>
                 <div className="icon">{item.icon}</div>
                 <div className="content">

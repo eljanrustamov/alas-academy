@@ -150,14 +150,14 @@ const Team = () => {
   return (
     <TeamStyled>
       <div className="container">
-        <div className="section-title">
+        <div className="section-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
           <span className="pre-title">Instructors</span>
           <h2 className="title">Course Instructors</h2>
         </div>
 
         <div className="row g-5">
           {instructors_data.slice(0, 4).map((instructor) => (
-            <div key={instructor.id} className="col-lg-3 col-sm-6 col-12">
+            <div key={instructor.id} className="col-lg-3 col-sm-6 col-12" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
               <TeamInstructor instructor={instructor} />
             </div>
           ))}
