@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FeaturesStyled = styled.div`
   background: linear-gradient(-90deg, var(--color-primary) 0%, orange 100%);
+  overflow-x: hidden;
 
   .features-grid-wrap {
     display: grid;

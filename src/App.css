@@ -8,3 +8,22 @@
 body{
   /* background-color: #EAF0F2 !important; */
 }
+
+
+/* common */
+
+.color-fb{
+ color: var(--color-facebook); 
+}
+.color-linkd{
+  color: var(--color-linkedin); 
+ }
+ .color-ig{
+  color: var(--color-instagram); 
+ }
+ .color-twitter{
+  color: var(--color-twitter); 
+ }
+ .color-yt{
+  color: var(--color-youtube); 
+ }

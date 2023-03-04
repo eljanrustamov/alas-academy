@@ -32,6 +32,14 @@
   --color-body-2: #f0f4f5;
   --bg-color: #eaf0f2;
 
+
+  --color-facebook:#1877f2;
+  --color-twitter:#1da1f2;
+  --color-linkedin:#0a66c2;
+  --color-youtube:#cd201f;
+  --color-instagram:#C231A1;
+
+
   --layout-lg: 1119px;
   --layout-md: 991px;
   --layout-sm: 767px;
@@ -76,7 +84,12 @@ h1{
 h2{
   font-size: 36px !important;
 
+  @media (min-width:767px) and (max-width:991px){ 
+    font-size: 30px !important;
+  }
+
   @media (max-width:767px){
     font-size:26px !important;
   }
 }
+
