@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import GirlIMG from "../../assets/img/hero.webp";
 import AuthorsIMG from "../../assets/img/authors.png";
 import { HeroStyled } from "./Hero.styles";

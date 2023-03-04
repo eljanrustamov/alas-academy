@@ -5,7 +5,6 @@ import { GoDatabase } from "react-icons/go";
 import { BsClipboardData } from "react-icons/bs";
 import { MdSecurity } from "react-icons/md";
 import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 const category_contents = {
   title: "Kurslarımız",

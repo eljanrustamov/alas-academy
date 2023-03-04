@@ -4,6 +4,8 @@ import Courses from './components/Courses/Courses.component';
 import Features from './components/Features/Features.component';
 import Header from './components/Header/Header.component.jsx'
 import Hero from './components/Hero/Hero.component';
+import Team from './components/Team/Team.component';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Features/>
       <Courses/>
       <Counterup/>
+      <Team/>
     </div>
   );
 }

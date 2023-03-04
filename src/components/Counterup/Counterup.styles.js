@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CounterupStyled = styled.div`
-  margin-bottom: 500px;
   position: relative;
+  overflow-x: hidden;
 
   &::before {
     content: "";
@@ -18,12 +18,12 @@ export const CounterupStyled = styled.div`
 
   .counterup-box-wrap {
     background-color: var(--color-white);
-    box-shadow: 0 30px 70px 0 rgb(16 12 47 / 8%);
+    box-shadow: 0px 30px 70px 0px rgb(16 12 47 / 8%);
     border-radius: 10px;
     position: relative;
     padding: 70px;
-    
-    @media (max-width:767px){
+
+    @media (max-width: 767px) {
       padding: 40px;
     }
 
@@ -77,11 +77,11 @@ export const CounterupStyled = styled.div`
     }
   }
 
-  .rocket-anim{
+  .rocket-anim {
     position: absolute;
     top: -60px;
     right: -60px;
     transform: rotate(-45deg);
-    z-index:1;
+    z-index: 1;
   }
 `;
