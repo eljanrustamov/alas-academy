@@ -35,7 +35,7 @@ const Testimonials = () => {
           </div>
           <div className="col-lg-7">
             <Swiper
-              slidesPerView={2}
+              slidesPerView={1}
               spaceBetween={30}
               loop={Infinity}
               className="home-one-testimonial-activator swiper"
