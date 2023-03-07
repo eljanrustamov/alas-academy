@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/img/alas-logo.png";
 import { HeaderStyled, DropdownContent } from "./Header.styles";
 import HeaderTopBar from "../HeaderTopBar/HeaderTopBar.component";
@@ -8,23 +8,14 @@ import "reactjs-popup/dist/index.css";
 import { motion } from "framer-motion";
 import SearchPopup from "../SearchPopup/SearchPopup.component";
 import Offcanvas from "../Offcanvas/Offcanvas.component";
+import UseSticky from '../../hooks/use-sticky'
 
 const Header = () => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const isDesktopXl = useMediaQuery({ minWidth: 1199 });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
-  const [height, setHeight] = useState(0);
-
-  const stickyHeader = () => {
-    setHeight(window.scrollY)
-  }
-
-  useEffect(() => {
-      window.addEventListener('scroll', stickyHeader)
-  }, []);
-
-  console.log(height)
+  const {isSticky} = UseSticky();
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
@@ -55,10 +46,10 @@ const Header = () => {
   };
 
   return (
-    <HeaderStyled>
+    <HeaderStyled className={isSticky ? "fixed" : ""}>
       {isDesktop && <HeaderTopBar />}
 
-      <div className={`header-navbar ${height > 180 ? 'navbar-sticky' : ''}`}>
+      <div className={`header-navbar ${isSticky ? "navbar-sticky" : ""}`}>
         <div className="header-brand">
           <a className="logo" href="/">
             <img src={Logo} alt="logo" />

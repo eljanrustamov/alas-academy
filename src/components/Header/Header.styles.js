@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const HeaderStyled = styled.div`
   /* overflow-x: hidden; */
 
+  &.fixed{
+    margin-top: 90px;
+  }
+
   .header-navbar {
     display: flex;
     justify-content: space-between;
@@ -12,8 +16,6 @@ export const HeaderStyled = styled.div`
     padding-right: 22px;
     background-color: var(--color-white);
     box-shadow: 0 6px 15px 0 rgb(0 0 0 / 5%);
-    /* position: fixed; */
-    z-index:99999;
 
     &.navbar-sticky {
       position: fixed;
@@ -21,8 +23,17 @@ export const HeaderStyled = styled.div`
       left: 0;
       right: 0;
       z-index: 99;
-      transition: 0.95s ease forwards;
       box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.05);
+      animation-name: navbar-sticky-animation;
+      animation-duration: 0.7s;
+    }
+    @keyframes navbar-sticky-animation {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0%);
+      }
     }
 
     .header-brand {
@@ -81,9 +92,9 @@ export const HeaderStyled = styled.div`
           transition: 0.3s all;
           cursor: pointer;
 
-          .dropdown{
+          .dropdown {
             position: absolute;
-            z-index:99;
+            z-index: 99;
           }
 
           svg {
