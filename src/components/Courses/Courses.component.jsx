@@ -63,7 +63,9 @@ const Courses = () => {
         <div className="section-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
           <h2 className="title">{title}</h2>
           <span className="shape-line"></span>
-          <p className="subtitle">{subtitle}</p>
+          {
+            // <p className="subtitle">{subtitle}</p>
+          }
         </div>
 
         <div className="row g-5">

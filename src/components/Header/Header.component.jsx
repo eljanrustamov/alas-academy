@@ -58,7 +58,7 @@ const Header = () => {
     <HeaderStyled>
       {isDesktop && <HeaderTopBar />}
 
-      <div className={`header-navbar ${height > 240 ? 'navbar-sticky' : ''}`}>
+      <div className={`header-navbar ${height > 180 ? 'navbar-sticky' : ''}`}>
         <div className="header-brand">
           <a className="logo" href="/">
             <img src={Logo} alt="logo" />
