@@ -15,16 +15,6 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
-  const [height, setHeight] = useState(0);
-  const stickyHeader = () => {
-    setHeight(window.scrollY)
-  }
-
-  useEffect(() => {
-      window.addEventListener('scroll', stickyHeader)
-  }, []);
-
-  console.log(height)
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
