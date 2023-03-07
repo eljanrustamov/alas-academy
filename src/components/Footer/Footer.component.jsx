@@ -20,10 +20,7 @@ const Footer = () => {
                 <div className="logo">
                   <img src={Logo} alt="logo"></img>
                 </div>
-                <p className="description">
-                  Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm
-                  tempor incidid unt labore dolore.
-                </p>
+                <p className="description">Gələcəyini biz düşündük!</p>
                 <div className="widget-information">
                   <ul className="information-list">
                     <li>
@@ -31,11 +28,11 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <span>Call:</span> +01 123 5641 231
+                      <span>Telefon:</span>+994 55 533 53 60
                     </li>
 
                     <li>
-                      <span>Email:</span> alasacademy@gmail.com
+                      <span>Email:</span> info@tfugaz.org
                     </li>
                   </ul>
                 </div>
@@ -43,27 +40,39 @@ const Footer = () => {
             </div>
             <div className="col-lg-3 col-sm-6">
               <div className="footer-widget explore">
-                <h4 className="widget-title">Kurslarımız</h4>
+                <h4 className="widget-title">Tədris Proqramları</h4>
                 <ul className="footer-link">
-                  <li>AI Engineering</li>
+                  <li>Süni İntellekt</li>
                   <li>Data Science</li>
-                  <li>Data Analytics</li>
-                  <li>Cyber Security</li>
-                  <li>Back-End Development</li>
-                  <li>Front-End Development</li>
+                  <li>Data Analitika</li>
+                  <li>Kiber Təhlükəsizlik</li>
+                  <li>Back-End Proqramlaşdırma</li>
+                  <li>Front-End Proqramlaşdırma</li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-2 col-sm-6">
               <div className="footer-widget quick-links">
-                <h4 className="widget-title">Links</h4>
+                <h4 className="widget-title">Keçidlər</h4>
                 <ul className="footer-link">
-                  <li>Home</li>
-                  <li>About</li>
-                  <li>Courses</li>
-                  <li>Instructors</li>
-                  <li>Our Students</li>
-                  <li>Contact</li>
+                  <li>
+                    <a href="#partners">Partnyorlarımız</a>
+                  </li>
+                  <li>
+                    <a href="#about">Haqqımızda</a>
+                  </li>
+                  <li>
+                    <a href="#courses">Tədris Proqramları</a>
+                  </li>
+                  <li>
+                    <a href="#instructors">Müəllimlərimiz</a>
+                  </li>
+                  <li>
+                    <a href="#testimonials">Tələbərimiz</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Əlaqə</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -72,40 +81,37 @@ const Footer = () => {
                 <h4 className="widget-title">Əlaqə</h4>
                 <div className="footer-widget-body">
                   <p className="description">
-                    Enter your email address to register to our newsletter
-                    subscription
+                    +994 55 533 53 56 <br /> +994 55 533 53 60
                   </p>
-                  <div className="input-group footer-subscription-form">
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Emailiniz..."
-                    />
-                    <CustomButton type="button">Abunə ol</CustomButton>
-                  </div>
+                  {
+                    // <div className="input-group footer-subscription-form">
+                    //   <input
+                    //     type="email"
+                    //     className="form-control"
+                    //     placeholder="Emailiniz..."
+                    //   />
+                    //   <CustomButton type="button">Abunə ol</CustomButton>
+                    // </div>
+                  }
+
                   <ul className="social-share">
                     <li>
-                      <a href="/">
+                      <a href="https://www.facebook.com/alas.edu.az/">
                         <FaFacebookF size={20} className="icon-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="https://www.linkedin.com/company/alaseduaz/?viewAsMember=true">
                         <FaLinkedinIn size={20} className="icon-linkedin" />
                       </a>
                     </li>
                     <li>
-                      <a href="/">
+                      <a href="https://www.instagram.com/alas.edu.az/">
                         <FaInstagram size={20} className="icon-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a href="/">
-                        <FaTwitter size={20} className="icon-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/">
+                      <a href="https://www.youtube.com/@alaseduaz">
                         <FaYoutube size={20} className="icon-youtube" />
                       </a>
                     </li>

@@ -32,6 +32,7 @@ export const TestimonialsStyled = styled.div`
 
     .swiper-wrapper {
       .testimonial-item {
+        height: 490px;
         box-shadow: 0px 10px 50px 0px rgba(26, 46, 85, 0.1);
         background-color: var(--color-white);
         border-radius: 10px;
@@ -42,11 +43,15 @@ export const TestimonialsStyled = styled.div`
         
 
         .image-box {
+          width: 70px;
+          height: 70px;
           display: inline-block;
           position: relative;
           margin-bottom: 35px;
+          
 
           img {
+            width: 100%;
             border-radius: 50%;
           }
 

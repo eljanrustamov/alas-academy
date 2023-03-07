@@ -8,7 +8,7 @@ import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
 
 
 const category_contents = {
-  title: "Kurslarımız",
+  title: "Tədris Proqramlarımız",
   subtitle:
     "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore",
   category_items: [
@@ -16,7 +16,7 @@ const category_contents = {
       delay: "50",
       color: "color-primary-style",
       icon: <GiBrain size={40} />,
-      title: "AI Engineering",
+      title: "Süni İntellekt",
     },
     {
       delay: "100",
@@ -28,26 +28,26 @@ const category_contents = {
       delay: "150",
       color: "color-extra01-style",
       icon: <BsClipboardData size={40} />,
-      title: "Data Analytics",
+      title: "Data Analitika",
     },
     {
       delay: "100",
       color: "color-extra02-style",
       icon: <MdSecurity size={40} />,
-      title: "Cyber Security",
+      title: "Kiber Təhlükəsizlik",
     },
 
     {
       delay: "100",
       color: "color-extra03-style",
       icon: <BiCodeAlt size={40} />,
-      title: "Back-End Development",
+      title: "Back-End Proqramlaşdırma",
     },
     {
       delay: "150",
       color: "color-extra04-style",
       icon: <BiCodeBlock size={40} />,
-      title: "Front-End Development",
+      title: "Front-End Proqramlaşdırma",
     },
   ],
 };
@@ -58,7 +58,7 @@ const Courses = () => {
 
 
   return (
-    <CoursesStyled>
+    <CoursesStyled id="courses">
       <div className="container">
         <div className="section-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
           <h2 className="title">{title}</h2>

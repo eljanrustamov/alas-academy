@@ -7,29 +7,29 @@ import RocketAnim from "../../assets/img/rocket.json";
 const counter_data = [
   {
     color: "color-primary",
-    number: 45.2,
-    text: "K",
-    title: "Student Enrolled",
+    number: 200,
+    text: "+",
+    title: "Tələbə",
     decimal: 1,
   },
   {
     color: "color-secondary",
-    number: 32.4,
-    text: "K",
-    title: "Class Completed",
+    number: 50,
+    text: "+",
+    title: "TƏDBİR",
     decimal: 1,
   },
   {
     color: "color-extra-1",
-    number: 354,
+    number: '1000',
     text: "+",
-    title: "Top Instructors",
+    title: "İcma üzvü",
   },
   {
     color: "color-extra-2",
     number: 100,
     text: "%",
-    title: "Satisfaction Rate",
+    title: "İşlə təmin olunma",
   },
 ];
 

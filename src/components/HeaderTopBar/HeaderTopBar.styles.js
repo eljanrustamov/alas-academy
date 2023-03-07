@@ -4,8 +4,6 @@ export const HeaderTopBarStyled = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* padding-left: 22px; */
-  /* padding-right: 22px; */
   background-color: var(--color-secondary);
 
   .header-top-info {
@@ -21,6 +19,14 @@ export const HeaderTopBarStyled = styled.div`
         color: var(--color-white);
         font-size: 14px;
         transition: 0.3s all;
+
+        .icon-number{
+          margin-bottom: 2px;
+        }
+        .number{
+          font-size: 13px;
+          margin-left: 7px;
+        }
 
         svg {
           font-size: 15px;

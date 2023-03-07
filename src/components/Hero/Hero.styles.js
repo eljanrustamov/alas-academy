@@ -7,7 +7,6 @@ export const HeroStyled = styled.div`
   position: relative;
   background-color: var(--bg-color);
   overflow-x: hidden;
-  z-index: -1;
 
   @media (max-width: 1119px) {
     min-height: 600px;
@@ -52,7 +51,8 @@ export const HeroStyled = styled.div`
 
     .subtitle {
       color: var(--color-header);
-      font-size: 18px;
+      /* font-size: 18px; */
+      font-size: 20px;
       font-family: var(--font-primary);
       margin-bottom: 24px !important;
     }
@@ -96,7 +96,13 @@ export const HeroStyled = styled.div`
         .media {
           display: flex;
           .thumb {
+            width: 175px;
+            height: 60px;
             margin-left: -2px;
+
+            img{
+              width: 100%;
+            }
           }
           .content {
             line-height: 1;

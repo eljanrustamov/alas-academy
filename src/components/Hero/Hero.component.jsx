@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-// import { motion } from "framer-motion";
 import GirlIMG from "../../assets/img/hero.webp";
-import AuthorsIMG from "../../assets/img/authors.png";
+import StudentsIMG from "../../assets/img/students2.png";
 import { HeroStyled } from "./Hero.styles";
 import CustomButton from "../CustomButton/CustomButton.component";
 import sal from "sal.js";
@@ -24,8 +23,8 @@ const Hero = () => {
                 data-sal="slide-up"
                 data-sal-duration="1000"
               >
-                Get <span className="highlight">2500+</span> <br />
-                Best Online Courses From Alas Academy
+                Gələcəyini <span className="highlight">biz</span> <br />
+                düşündük.
               </h1>
 
               <p
@@ -34,8 +33,7 @@ const Hero = () => {
                 data-sal-duration="1000"
                 className="subtitle"
               >
-                Excepteur sint occaecat cupidatat non proident sunt in culpa qui
-                officia deserunt mollit.
+                Proqramlaşdırma kariyerana bizimlə başla
               </p>
 
               <div
@@ -44,7 +42,9 @@ const Hero = () => {
                 data-sal="slide-up"
                 data-sal-duration="1000"
               >
-                <CustomButton>Find courses</CustomButton>
+                <CustomButton href="https://forms.gle/JWUWAPKiokezTnQA6">
+                  İndi qeydiyyatdan keç
+                </CustomButton>
               </div>
             </div>
           </div>
@@ -65,16 +65,13 @@ const Hero = () => {
                 data-sal-duration="1000"
               >
                 <div className="inner">
-                  <h5 className="title">Müəllimlərimiz</h5>
+                  <h5 className="title">Tələbələrimiz</h5>
                   <div className="media">
                     <div className="thumb">
-                      <img
-                        src={AuthorsIMG}
-                        alt="Authors"
-                      />
+                      <img src={StudentsIMG} alt="Authors" />
                     </div>
                     <div className="content">
-                      <span>200+</span> Müəllimlər
+                      <span>200+</span> Tələbə
                     </div>
                   </div>
                 </div>

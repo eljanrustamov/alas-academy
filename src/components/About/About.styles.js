@@ -12,6 +12,10 @@ export const AboutStyled = styled.div`
     }
     img {
       border-radius: 10px;
+      &.about-image-main {
+        width: 370px;
+      height: auto;
+      }
     }
 
     .video-box {
@@ -63,27 +67,27 @@ export const AboutStyled = styled.div`
       }
 
       .loading-bar {
-          margin: -20px 0;
-          padding-top: 20px;
+        margin: -20px 0;
+        padding-top: 20px;
 
-          span {
-            display: block;
-            height: 7px;
-            background-color: #eaf0f2;
-            border-radius: 10px;
-            margin: 20px 0;
+        span {
+          display: block;
+          height: 7px;
+          background-color: #eaf0f2;
+          border-radius: 10px;
+          margin: 20px 0;
 
-            &:first-child {
-              width: 80%;
-            }
-            &:nth-child(2n) {
-              width: 45%;
-            }
+          &:first-child {
+            width: 80%;
+          }
+          &:nth-child(2n) {
+            width: 45%;
           }
         }
+      }
     }
 
-    .award-status {
+    /* .award-status {
       position: absolute;
       right: 70px;
       bottom: 0;
@@ -133,13 +137,13 @@ export const AboutStyled = styled.div`
         }
       }
 
-      &.bounce-slide{
+      &.bounce-slide {
         animation-duration: 2.5s;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
         animation-name: bounceSlide;
       }
-    }
+    } */
   }
 
   .about-content {
@@ -196,23 +200,24 @@ export const AboutStyled = styled.div`
     }
   }
 
-
   @keyframes bounceSlide {
-    0%, 20%, 50%, 80%, 100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
     }
 
     40% {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
     }
 
     60% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
     }
-}
+  }
 `;
-
-

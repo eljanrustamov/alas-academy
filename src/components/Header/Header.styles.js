@@ -13,6 +13,16 @@ export const HeaderStyled = styled.div`
     box-shadow: 0 6px 15px 0 rgb(0 0 0 / 5%);
     position: relative;
 
+    &.navbar-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      transition: 0.95s ease forwards;
+      box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.05);
+    }
+
     .header-brand {
       .logo {
         margin-right: 40px;

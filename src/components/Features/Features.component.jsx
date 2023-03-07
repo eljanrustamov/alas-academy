@@ -1,12 +1,15 @@
 import React from "react";
 import { FeaturesStyled } from "./Features.styles";
-import Certificate from '../../assets/img/svgs/Certificate'
+import Graduate from '../../assets/img/graduate.png'
+import CommunitySupportPNG from '../../assets/img/community-support.png'
+import InternationalCertificatePNG from '../../assets/img/international-certificate.png'
+import RemotePNG from '../../assets/img/remote-working.png'
 
 const category_contents = [
-    { icon: <Certificate/>, title: '3020', subtitle: 'Online Courses' },
-    { icon: <Certificate/>, title: 'Top', subtitle: 'Instructors' },
-    { icon: <Certificate/>, title: 'Online', subtitle: 'Certifications' },
-    { icon: <Certificate/>, title: '6000', subtitle: 'Members' },
+    { icon: Graduate, title: '+ 100', subtitle: 'Məzun' },
+    { icon: InternationalCertificatePNG, title: 'Beynəlxalq', subtitle: 'Sertifikatlar' },
+    { icon: RemotePNG, title: 'Remote', subtitle: 'iş imkanı' },
+    { icon: CommunitySupportPNG, title: 'İcma', subtitle: 'dəstəyi' },
   ]
 
 const Features = () => {
@@ -19,7 +22,9 @@ const Features = () => {
                 key={i}
                 className="features-box features-style features-svg-animate"
               >
-                <div className="icon">{category.icon}</div>
+                <div className="icon">
+                  <img src={category.icon} alt={category.subtitle}/>
+                </div>
                 <div className="content">
                   <h5 className="title">
                     <span>{category.title}</span>

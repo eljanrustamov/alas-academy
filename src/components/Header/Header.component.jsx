@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/img/alas-logo.png";
 import { HeaderStyled, DropdownContent } from "./Header.styles";
 import HeaderTopBar from "../HeaderTopBar/HeaderTopBar.component";
@@ -14,6 +14,17 @@ const Header = () => {
   const isDesktopXl = useMediaQuery({ minWidth: 1199 });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+
+  const [height, setHeight] = useState(0);
+  const stickyHeader = () => {
+    setHeight(window.scrollY)
+  }
+
+  useEffect(() => {
+      window.addEventListener('scroll', stickyHeader)
+  }, []);
+
+  console.log(height)
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
@@ -47,7 +58,7 @@ const Header = () => {
     <HeaderStyled>
       {isDesktop && <HeaderTopBar />}
 
-      <div className="header-navbar">
+      <div className={`header-navbar`}>
         <div className="header-brand">
           <a className="logo" href="/">
             <img src={Logo} alt="logo" />
@@ -73,7 +84,7 @@ const Header = () => {
                 >
                   <DropdownContent>
                     <li>
-                      <a href="/">AI Engineering</a>
+                      <a href="/">Süni İntellekt</a>
                     </li>
                     {
                       // <li>
@@ -84,16 +95,16 @@ const Header = () => {
                       <a href="/">Data Science</a>
                     </li>
                     <li>
-                      <a href="/">Data Analytics</a>
+                      <a href="/">Data Analitika</a>
                     </li>
                     <li>
-                      <a href="/">Cyber Security</a>
+                      <a href="/">Kiber Təhlükəsizlik</a>
                     </li>
                     <li>
-                      <a href="/">Back-End Development</a>
+                      <a href="/">Back-End Proqramlaşdırma</a>
                     </li>
                     <li>
-                      <a href="/">Front-End Development</a>
+                      <a href="/">Front-End Proqramlaşdırma</a>
                     </li>
                   </DropdownContent>
                 </motion.div>

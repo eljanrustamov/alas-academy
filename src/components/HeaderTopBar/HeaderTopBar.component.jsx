@@ -5,8 +5,7 @@ import { MdEmail } from "react-icons/md";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
+  FaLinkedinIn
 } from "react-icons/fa";
 
 const HeaderTopBar = () => {
@@ -15,32 +14,27 @@ const HeaderTopBar = () => {
       <ul className="header-top-info">
         <li>
           <a href="/">
-            <BsFillTelephoneFill />
-            Call: +994559567868
+            <BsFillTelephoneFill className="icon-number" />
+            Telefon: <span className="number">+ 994 55 533 53 60</span>
           </a>
         </li>
 
         <li>
           <a href="/">
             <MdEmail size={18} />
-            Email: alasacademy@gmail.com
+            info@tfugaz.org
           </a>
         </li>
 
         <li className="social-icons">
-          <a href="/">
+          <a href="https://www.instagram.com/alas.edu.az/" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://www.facebook.com/alas.edu.az/" target="_blank" rel="noreferrer">
             <FaFacebookF />
           </a>
-          <a href="/">
-            <FaTwitter />
-          </a>
-
-          <a href="/">
+          <a href="https://www.linkedin.com/company/alaseduaz/" target="_blank" rel="noreferrer">
             <FaLinkedinIn />
-          </a>
-
-          <a href="/">
-            <FaInstagram />
           </a>
         </li>
       </ul>

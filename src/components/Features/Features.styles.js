@@ -36,6 +36,10 @@ export const FeaturesStyled = styled.div`
         font-size: 32px;
         margin: 0 auto 28px;
         transition: 0.3s all;
+
+        img{
+          width: 50%;
+        }
       }
       .content {
         .title {

@@ -73,6 +73,7 @@ export const CounterupStyled = styled.div`
           font-size: 13px;
           text-transform: uppercase;
           font-weight: normal;
+          font-family: var(--font-primary);
         }
       }
 

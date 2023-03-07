@@ -15,10 +15,9 @@ const CtaArea = () => {
               data-sal-duration="800"
             >
               <h2 className="title">
-                Get Your Quality Skills <span>Certificate</span> Through Alas
-                Academy
+              Tədris proqramına qoşul, <span>beynəlxalq sertifikat</span> əldə edərək işə başla
               </h2>
-              <CustomButton>Get started Now</CustomButton>
+              <CustomButton href="https://forms.gle/JWUWAPKiokezTnQA6">İndi qeydiyyatdan keç</CustomButton>
             </div>
           </div>
         </div>

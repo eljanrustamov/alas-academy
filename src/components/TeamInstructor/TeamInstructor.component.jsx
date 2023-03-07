@@ -1,15 +1,15 @@
 import React from "react";
 import { TeamInstructorStyled } from "./TeamInstructor";
 import {TfiSharethis} from 'react-icons/tfi'
-import Instructor01 from "../../assets/img/team-01.webp";
 
 const TeamInstructor = ({ instructor }) => {
+
   return (
     <TeamInstructorStyled className="edu-team-grid team-style-1">
         <div className="thumbnail-wrap">
           <div className="thumbnail">
               <img
-                src={Instructor01}
+                src={instructor.img}
                 alt="team images"
               />
           </div>

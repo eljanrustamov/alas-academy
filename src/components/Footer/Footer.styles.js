@@ -45,9 +45,13 @@ export const FooterStyled = styled.div`
           margin-top: 11px;
           transition: 0.3s all;
           cursor: pointer;
-
+          
           &:hover {
             color: var(--color-primary);
+          }
+
+          a{
+            color: var(--bs-body-color);
           }
         }
       }

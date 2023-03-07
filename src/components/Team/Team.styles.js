@@ -24,6 +24,7 @@ export const TeamStyled = styled.div`
         margin-bottom: 4px;
         font-size: 36px;
         font-weight: 700;
+        color: var(--bs-body-color);
     }
   }
 
