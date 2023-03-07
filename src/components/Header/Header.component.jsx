@@ -14,7 +14,17 @@ const Header = () => {
   const isDesktopXl = useMediaQuery({ minWidth: 1199 });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+  const [height, setHeight] = useState(0);
 
+  const stickyHeader = () => {
+    setHeight(window.scrollY)
+  }
+
+  useEffect(() => {
+      window.addEventListener('scroll', stickyHeader)
+  }, []);
+
+  console.log(height)
 
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
@@ -48,7 +58,7 @@ const Header = () => {
     <HeaderStyled>
       {isDesktop && <HeaderTopBar />}
 
-      <div className={`header-navbar`}>
+      <div className={`header-navbar ${height > 240 ? 'navbar-sticky' : ''}`}>
         <div className="header-brand">
           <a className="logo" href="/">
             <img src={Logo} alt="logo" />
@@ -67,7 +77,7 @@ const Header = () => {
               >
                 Kurslar <FaAngleDown />
                 <motion.div
-                  className="position-absolute"
+                  className="dropdown"
                   initial="exit"
                   animate={isHover ? "enter" : "exit"}
                   variants={subMenuAnimate}

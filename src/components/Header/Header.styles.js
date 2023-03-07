@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.div`
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+
   .header-navbar {
     display: flex;
     justify-content: space-between;
@@ -11,7 +12,8 @@ export const HeaderStyled = styled.div`
     padding-right: 22px;
     background-color: var(--color-white);
     box-shadow: 0 6px 15px 0 rgb(0 0 0 / 5%);
-    position: relative;
+    /* position: fixed; */
+    z-index:99999;
 
     &.navbar-sticky {
       position: fixed;
@@ -78,6 +80,11 @@ export const HeaderStyled = styled.div`
           line-height: 90px;
           transition: 0.3s all;
           cursor: pointer;
+
+          .dropdown{
+            position: absolute;
+            z-index:99;
+          }
 
           svg {
             margin-left: 8px;
