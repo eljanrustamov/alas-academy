@@ -21,6 +21,7 @@
 
 :root {
   --color-primary: #ff6f00;
+  --color-primary-2: rgb(255, 205, 167);
   --color-secondary: #415065;
   --color-header: #181818;
   --color-white: #fff;
@@ -90,6 +91,15 @@ h2{
 
   @media (max-width:767px){
     font-size:26px !important;
+  }
+}
+
+
+h4{
+  font-size: 20px !important;
+
+  @media (max-width:767px){
+    font-size:18px !important;
   }
 }
 

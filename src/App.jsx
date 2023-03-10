@@ -1,31 +1,22 @@
-import './App.css';
-import About from './components/About/About.component';
-import Counterup from './components/Counterup/Counterup.component';
-import Courses from './components/Courses/Courses.component';
-import CtaArea from './components/CtaArea/CtaArea.component';
-import Features from './components/Features/Features.component';
-import Footer from './components/Footer/Footer.component';
-import Header from './components/Header/Header.component.jsx'
-import Hero from './components/Hero/Hero.component';
-import Partners from './components/Partners/Partners.component';
-import Team from './components/Team/Team.component';
-import Testimonials from './components/Testimonials/Testimonials.component';
-
+import "./App.css";
+import Layout from "./layout/Layout";
+import CourseDetails from "./pages/CourseDetails/CourseDetails.component";
+import Main from "./pages/Main";
+import Contact from './pages/Contact/Contact'
+import NotFound from './pages/NotFound/NotFound'
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Hero/>
-      <Features/>
-      <Partners/>
-      <Courses/>
-      <Counterup/>
-      <Team/>
-      <CtaArea/>
-      <About/>
-      <Testimonials/>
-      <Footer/>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Main />} />
+          <Route path="tedris-proqramlarimiz/:courseName" element={<CourseDetails />} />
+          <Route path="elaqe" element={<Contact/>} />
+          <Route path="*" element={<NotFound/>} />
+        </Route>
+      </Routes>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderStyled = styled.div`
   /* overflow-x: hidden; */
 
-  &.fixed{
+  &.fixed {
     margin-top: 90px;
   }
 
@@ -69,7 +69,6 @@ export const HeaderStyled = styled.div`
           display: flex;
           align-items: center;
           padding: 0 26px;
-          color: var(--color-heading);
           font-size: 15px;
           /* font-weight: 600; */
           line-height: 90px;
@@ -78,6 +77,14 @@ export const HeaderStyled = styled.div`
 
           &:hover {
             color: var(--color-primary);
+          }
+
+          a {
+            color: var(--color-heading);
+
+            &.active {
+              color: var(--color-primary);
+            }
           }
         }
 
@@ -85,24 +92,28 @@ export const HeaderStyled = styled.div`
           display: flex;
           align-items: center;
           padding: 0 26px;
-          color: var(--color-heading);
           font-size: 15px;
           /* font-weight: 600; */
           line-height: 90px;
           transition: 0.3s all;
           cursor: pointer;
 
+          a {
+            color: var(--color-heading);
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+
           .dropdown {
             position: absolute;
             z-index: 99;
+            color: var(--color-heading) !important;
           }
 
           svg {
             margin-left: 8px;
-          }
-
-          &:hover {
-            color: var(--color-primary);
           }
         }
       }

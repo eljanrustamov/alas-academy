@@ -1,19 +1,18 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   /* background-color: #EAF0F2 !important; */
 }
 
-
-.shape-line{
+.shape-line {
   width: 10%;
   height: 5px;
   background-color: var(--color-primary);
@@ -32,18 +31,22 @@ body{
 
 /* common */
 
-.color-fb{
- color: var(--color-facebook); 
+.active {
+  color: var(--color-primary) !important;
 }
-.color-linkd{
-  color: var(--color-linkedin); 
- }
- .color-ig{
-  color: var(--color-instagram); 
- }
- .color-twitter{
-  color: var(--color-twitter); 
- }
- .color-yt{
-  color: var(--color-youtube); 
- }
+
+.color-fb {
+  color: var(--color-facebook);
+}
+.color-linkd {
+  color: var(--color-linkedin);
+}
+.color-ig {
+  color: var(--color-instagram);
+}
+.color-twitter {
+  color: var(--color-twitter);
+}
+.color-yt {
+  color: var(--color-youtube);
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import { FooterStyled } from "./Footer.styles";
 import Logo from "../../assets/img/alas-logo.png";
-import CustomButton from "../CustomButton/CustomButton.component";
+import CustomButton from "../../components/CustomButton/CustomButton.component";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,6 +10,8 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+
+
 const Footer = () => {
   return (
     <FooterStyled>

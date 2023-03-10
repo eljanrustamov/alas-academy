@@ -33,7 +33,7 @@ const Hero = () => {
                 data-sal-duration="1000"
                 className="subtitle"
               >
-                Proqramlaşdırma kariyerana bizimlə başla
+                Proqramlaşdırma karyerana bizimlə başla
               </p>
 
               <div
