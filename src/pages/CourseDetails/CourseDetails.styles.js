@@ -457,8 +457,8 @@ export const CourseDetailsStyled = styled.div`
             padding: 0 10px;
             font-size: 15px;
 
-            span {
-              color: var(--color-primary);
+            a{
+              color: var(--color-primary) !important;
             }
           }
         }

@@ -10,6 +10,7 @@ import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 //import styles 👇
 import "react-modern-drawer/dist/index.css";
 import { OffcanvasStyled } from "./Offcanvas.styles";
+import { NavLink } from "react-router-dom";
 
 const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -41,7 +42,7 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
               <a href="/">Ana Səhifə</a>
             </li>
             <li>
-              <a href="/">Haqqımızda</a>
+              <NavLink to="#haqqimizda">Haqqımızda</NavLink>
             </li>
 
             <li className={`has-dropdown${isDropdownOpen ? " active" : ""}`}>
@@ -50,25 +51,22 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
               </button>
               <ul class={`submenu${isDropdownOpen ? " active" : ""}`}>
                 <li>
-                  <a href="/">AI Engineering</a>
+                  <NavLink to="/tedris-proqramlarimiz/suni-intellekt">Süni İntellekt</NavLink>
                 </li>
                 <li>
-                  <a href="/">Blockchain Development</a>
+                  <NavLink to="/tedris-proqramlarimiz/data-science">Data Science</NavLink>
                 </li>
                 <li>
-                  <a href="/">Data Science</a>
+                  <NavLink to="/tedris-proqramlarimiz/data-analitika">Data Analytics</NavLink>
                 </li>
                 <li>
-                  <a href="/">Data Analytics</a>
+                  <NavLink to="/tedris-proqramlarimiz/kiber-tehlukesizlik">Cyber Security</NavLink>
                 </li>
                 <li>
-                  <a href="/">Cyber Security</a>
+                  <NavLink to="/tedris-proqramlarimiz/backend-proqramlasdirma">Back-End Development</NavLink>
                 </li>
                 <li>
-                  <a href="/">Back-End Development</a>
-                </li>
-                <li>
-                  <a href="/">Front-End Development</a>
+                  <NavLink to="/tedris-proqramlarimiz/frontend-proqramlasdirma">Front-End Development</NavLink>
                 </li>
               </ul>
             </li>
