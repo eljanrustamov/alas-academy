@@ -6,18 +6,18 @@ export const CtaAreaStyled = styled.div`
   position: relative;
   z-index: 1;
   text-align: center;
-  overflow-x:hidden;
+  overflow-x: hidden;
 
   .section-title {
-    .title{
-        font-weight: 700;
-        font-size: 36px;
-        margin-bottom: 28px;
-        line-height: 1.39;
+    .title {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 28px;
+      line-height: 1.39;
 
-        span{
-            color: var(--color-primary);
-        }
+      span {
+        color: var(--color-primary);
+      }
     }
   }
 `;

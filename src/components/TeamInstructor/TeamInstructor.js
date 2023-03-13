@@ -19,7 +19,7 @@ export const TeamInstructorStyled = styled.div`
         right: 0;
         bottom: 0;
         border-radius: 10px;
-        background-color: rgba(255, 111, 0, 0.6);
+        background-color: var(--color-primary-2);
         visibility: hidden;
         opacity: 0;
         transition: 0.3s all;

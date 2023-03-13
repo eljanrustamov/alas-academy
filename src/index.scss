@@ -12,6 +12,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Spartan";
+  src: url("../src/assets/fonts/spartan-cufonfonts/Spartan-SemiBold.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'Spartan';
   src: url('../src/assets/fonts/spartan-cufonfonts/Spartan-Bold.ttf');
@@ -21,10 +29,13 @@
 
 :root {
   --color-primary: #ff6f00;
-  --color-primary-2: rgb(255, 205, 167);
+  --color-primary-2: rgba(255, 111, 0, 0.6);
+  // --color-primary-2: rgb(255, 205, 167);
+  
   --color-secondary: #415065;
   --color-header: #181818;
   --color-white: #fff;
+  --color-black: #000;
   --color-extra-1: #1ab69d;
   --color-extra-2: #8e56ff;
 
