@@ -2,10 +2,13 @@ import React from "react";
 import { NotFoundStyled } from "./NotFound.styles";
 import { Player } from "@lottiefiles/react-lottie-player";
 import PageNotFoundAnim from '../../assets/img/page-not-found.json'
-
+import { Helmet } from "react-helmet";
 const NotFound = () => {
   return (
     <NotFoundStyled>
+      <Helmet>
+        <title>Səhifə tapılmadı - Alas Academy</title>
+      </Helmet>
       <Player
         autoplay
         loop

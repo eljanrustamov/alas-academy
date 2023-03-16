@@ -149,7 +149,6 @@ const Header = () => {
                 <NavLink
                   to="/elaqe"
                   className={({ isActive }) => (isActive ? "active" : "")}
-                  smooth={true} duration={5000}
                 >
                   Əlaqə
                 </NavLink>

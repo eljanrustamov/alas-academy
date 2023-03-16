@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CourseDetailsStyled = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 240px;
 
   .heading-wrapper {
     display: flex;
@@ -16,11 +16,12 @@ export const CourseDetailsStyled = styled.div`
 
   .course-details-content {
     .image-wrapper {
-      width: 976px;
-      height: 672px;
+      max-width: 976px;
+      /* height: 672px; */
 
       img {
         max-width: 100%;
+        
       }
     }
 

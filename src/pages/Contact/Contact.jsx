@@ -8,6 +8,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import CustomButton from "../../components/CustomButton/CustomButton.component";
+import { Helmet } from "react-helmet";
+
 
 const Contact = () => {
   const { handleSubmit, handleChange, values } = useFormik({
@@ -23,6 +25,9 @@ const Contact = () => {
 
   return (
     <ContactStyled>
+    <Helmet>
+      <title>Əlaqə - Alas Academy</title>
+    </Helmet>
       <div className="container">
         <div className="row">
           <div className="col-xl-4 col-lg-6">

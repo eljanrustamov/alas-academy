@@ -24,9 +24,9 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
       >
         <div className="header-top">
           <div className="logo">
-            <a href="/">
+            <NavLink to="/">
               <img src={Logo} alt="logo"/>
-            </a>
+            </NavLink>
           </div>
 
           <div className="close-menu" onClick={() => setIsOffcanvasOpen(false)}>
@@ -42,7 +42,7 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
               <NavLink to="/">Ana Səhifə</NavLink>
             </li>
             <li>
-              <NavLink to="#haqqimizda">Haqqımızda</NavLink>
+              <a href="/#about">Haqqımızda</a>
             </li>
 
             <li className={`has-dropdown${isDropdownOpen ? " active" : ""}`}>
@@ -72,7 +72,7 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
             </li>
 
             <li>
-              <a href="/">Əlaqə</a>
+              <NavLink to="/elaqe">Əlaqə</NavLink>
             </li>
           </ul>
         </div>

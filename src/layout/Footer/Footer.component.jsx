@@ -10,6 +10,7 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -74,7 +75,7 @@ const Footer = () => {
                     <a href="#testimonials">Tələbərimiz</a>
                   </li>
                   <li>
-                    <a href="#contact">Əlaqə</a>
+                    <Link to="/elaqe">Əlaqə</Link>
                   </li>
                 </ul>
               </div>

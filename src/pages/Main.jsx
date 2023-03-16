@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import About from "../components/About/About.component";
 import Counterup from "../components/Counterup/Counterup.component";
 import Courses from "../components/Courses/Courses.component";
@@ -12,12 +12,17 @@ import Testimonials from "../components/Testimonials/Testimonials.component";
 import sal from "sal.js";
 import "../assets/scss/default/_sal.scss";
 
+//
+import { Helmet } from "react-helmet";
 const Main = () => {
   useEffect(() => {
     sal();
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Əsas Səhifə - Alas Academy</title>
+      </Helmet>
       <Hero />
       <Features />
       <Partners />

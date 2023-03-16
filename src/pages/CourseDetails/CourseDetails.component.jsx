@@ -29,7 +29,8 @@ import "react-tabs/style/react-tabs.css";
 //  sal animation
 import sal from "sal.js";
 import "../../assets/scss/default/_sal.scss";
-
+// 
+import { Helmet } from "react-helmet";
 
 
 // 
@@ -71,6 +72,9 @@ const CourseDetails = () => {
 
   return (
     <CourseDetailsStyled>
+    <Helmet>
+      <title>{courseName} - Alas Academy</title>
+    </Helmet>
       <div className="heading-wrapper" ref={headingRef}>
         <div className="container">
           <div className="row justify-content-center text-center">
