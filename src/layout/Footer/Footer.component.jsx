@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
   return (
     <FooterStyled>
@@ -32,7 +31,8 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <span>Telefon:</span>+994 55 533 53 60
+                      <span>Telefon:</span> <br />
+                      +994 (55) 533 53 60 <br /> +994 (55) 533 53 56
                     </li>
 
                     <li>
@@ -84,9 +84,6 @@ const Footer = () => {
               <div className="footer-widget contacts">
                 <h4 className="widget-title">Əlaqə</h4>
                 <div className="footer-widget-body">
-                  <p className="description">
-                    +994 55 533 53 56 <br /> +994 55 533 53 60
-                  </p>
                   {
                     // <div className="input-group footer-subscription-form">
                     //   <input
@@ -120,6 +117,18 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
+
+                  <div
+                    className="footer-google-map"
+                    style={{ width: "100%", marginTop: "25px" }}
+                  >
+                    <iframe
+                      title="map"
+                      width="100%"
+                      height="150"
+                      src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=Baku,%20Caspian%20Plaza+(Caspian%20Plaza)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>
