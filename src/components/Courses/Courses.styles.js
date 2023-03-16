@@ -48,14 +48,14 @@ export const CoursesStyled = styled.div`
       align-items: center;
       flex: 1 1;
 
-      a {
+      p {
         color: var(--color-header);
       }
     }
 
     &:hover {
       .icon,
-      .content a {
+      .content p {
         color: var(--color-white) !important;
       }
     }

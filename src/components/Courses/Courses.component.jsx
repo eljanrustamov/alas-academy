@@ -5,7 +5,7 @@ import { GoDatabase } from "react-icons/go";
 import { BsClipboardData } from "react-icons/bs";
 import { MdSecurity } from "react-icons/md";
 import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
-
+import {NavLink} from 'react-router-dom'
 
 const category_contents = {
   title: "Tədris Proqramlarımız",
@@ -17,24 +17,28 @@ const category_contents = {
       color: "color-primary-style",
       icon: <GiBrain size={40} />,
       title: "Süni İntellekt",
+      pathName:'suni-intellekt'
     },
     {
       delay: "100",
       color: "color-secondary-style",
       icon: <GoDatabase size={40} />,
       title: "Data Science",
+      pathName:'data-science'
     },
     {
       delay: "150",
       color: "color-extra01-style",
       icon: <BsClipboardData size={40} />,
       title: "Data Analitika",
+      pathName:'data-analitika'
     },
     {
       delay: "100",
       color: "color-extra02-style",
       icon: <MdSecurity size={40} />,
       title: "Kiber Təhlükəsizlik",
+      pathName:'kiber-tehlukesizlik'
     },
 
     {
@@ -42,12 +46,14 @@ const category_contents = {
       color: "color-extra03-style",
       icon: <BiCodeAlt size={40} />,
       title: "Back-End Proqramlaşdırma",
+      pathName:'backend-proqramlasdirma'
     },
     {
       delay: "150",
       color: "color-extra04-style",
       icon: <BiCodeBlock size={40} />,
       title: "Front-End Proqramlaşdırma",
+      pathName:'frontend-proqramlasdirma'
     },
   ],
 };
@@ -71,12 +77,12 @@ const Courses = () => {
         <div className="row g-5">
           {category_items.map((item) => (
             <div className="col-lg-4 col-md-6" data-sal-delay={item.delay} data-sal="slide-up" data-sal-duration="800" key={item.title}>
-              <div className={`course-item ${item.color}`}>
+              <NavLink to={`/tedris-proqramlarimiz/${item.pathName}`} className={`course-item ${item.color}`} href="/">
                 <div className="icon">{item.icon}</div>
                 <div className="content">
-                  <a href="/">{item.title}</a>
+                  <p>{item.title}</p>
                 </div>
-              </div>
+              </NavLink>
             </div>
           ))}
         </div>

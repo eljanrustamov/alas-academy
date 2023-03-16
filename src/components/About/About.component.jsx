@@ -64,7 +64,7 @@ const About = () => {
               <div className="section-title">
                 <span className="pre-title">Haqqımızda</span>
                 <h2 className="title">
-                  <span>Alas Academy</span> ilə proqramlaşdırma kayeranı başla
+                  <span>Alas Academy</span> ilə proqramlaşdırma karyeranı başla
                 </h2>
                 <p>
                   Alas Academy, fəaliyyətini 2020-ci ildə “TensorFlow User Group
