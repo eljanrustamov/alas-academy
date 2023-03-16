@@ -4,6 +4,8 @@ export const CourseDetailsStyled = styled.div`
   margin-bottom: 100px;
 
   .heading-wrapper {
+    display: flex;
+    align-items: center;
     padding: 120px 0;
     color: var(--color-white);
     margin-bottom: 100px;
@@ -14,7 +16,8 @@ export const CourseDetailsStyled = styled.div`
 
   .course-details-content {
     .image-wrapper {
-      max-width: 976px;
+      width: 976px;
+      height: 672px;
 
       img {
         max-width: 100%;

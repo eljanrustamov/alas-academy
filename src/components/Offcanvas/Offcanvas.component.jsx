@@ -39,7 +39,7 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
         <div className="mm-menu">
           <ul>
             <li>
-              <a href="/">Ana Səhifə</a>
+              <NavLink to="/">Ana Səhifə</NavLink>
             </li>
             <li>
               <NavLink to="#haqqimizda">Haqqımızda</NavLink>

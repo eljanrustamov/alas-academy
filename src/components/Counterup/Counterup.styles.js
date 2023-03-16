@@ -93,7 +93,7 @@ export const CounterupStyled = styled.div`
     }
   }
 
-  .rocket-anim {
+  .rocket-anim-wrap {
     position: absolute;
     top: -60px;
     right: -60px;

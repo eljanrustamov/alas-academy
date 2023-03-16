@@ -3,13 +3,9 @@ import GirlIMG from "../../assets/img/hero.webp";
 import StudentsIMG from "../../assets/img/students2.png";
 import { HeroStyled } from "./Hero.styles";
 import CustomButton from "../CustomButton/CustomButton.component";
-import sal from "sal.js";
-import "../../assets/scss/default/_sal.scss";
 
 const Hero = () => {
-  useEffect(() => {
-    sal();
-  }, []);
+
 
   return (
     <HeroStyled className="hero-style-1">

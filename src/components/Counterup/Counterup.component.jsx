@@ -4,6 +4,7 @@ import Counter from "../Counter/Counter.component";
 import { Player } from "@lottiefiles/react-lottie-player";
 import RocketAnim from "../../assets/img/rocket.json";
 
+
 const counter_data = [
   {
     color: "color-primary",
@@ -34,6 +35,8 @@ const counter_data = [
 ];
 
 const Counterup = () => {
+
+
   console.log(counter_data[0].number);
 
   return (
@@ -75,13 +78,14 @@ const Counterup = () => {
                 ))}
               </div>
             </div>
+            <div className="rocket-anim-wrap" data-sal="fade" data-sal-duration="800" data-sal-delay="300">
             <Player
               autoplay
               loop
               src={RocketAnim}
               style={{ height: "250px", width: "250px" }}
-              className="rocket-anim"
             ></Player>
+            </div>
           </div>
         </div>
       </div>

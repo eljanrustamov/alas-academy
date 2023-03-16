@@ -3,7 +3,6 @@ import { HeaderStyled, DropdownContent } from "./Header.styles";
 import HeaderTopBar from "../../components/HeaderTopBar/HeaderTopBar.component";
 import SearchPopup from "../../components/SearchPopup/SearchPopup.component";
 import Offcanvas from "../../components/Offcanvas/Offcanvas.component";
-import Courses from "../../components/Courses/Courses.component";
 
 import { FaAngleDown, FaSistrix, FaBars } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
@@ -13,6 +12,7 @@ import Logo from "../../assets/img/alas-logo.png";
 
 import "reactjs-popup/dist/index.css";
 import { NavLink, useHref } from "react-router-dom";
+
 
 const subMenuAnimate = {
   enter: {
@@ -142,13 +142,14 @@ const Header = () => {
                 </motion.div>
               </motion.li>
               <li className="menu-item">
-                <a href="#about">Haqqımızda</a>
+                <a href="/#about">Haqqımızda</a>
               </li>
 
               <li className="menu-item">
                 <NavLink
                   to="/elaqe"
                   className={({ isActive }) => (isActive ? "active" : "")}
+                  smooth={true} duration={5000}
                 >
                   Əlaqə
                 </NavLink>

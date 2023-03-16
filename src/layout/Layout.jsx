@@ -1,30 +1,16 @@
-import React from 'react'
-import Header from './Header/Header.component';
-import Footer from './Footer/Footer.component';
-import { Outlet } from 'react-router-dom';
-import CtaArea from '../components/CtaArea/CtaArea.component';
+import React from "react";
+import Header from "./Header/Header.component";
+import Footer from "./Footer/Footer.component";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({children}) => {
+const Layout = () => {
   return (
-    <>
-    <Header/>
-    <Outlet/>
-    <Footer/>
-    </>
-  )
-}
+    <React.Fragment>
+      <Header />
+      <Outlet />
+      <Footer />
+    </React.Fragment>
+  );
+};
 
-export default Layout
-
-
-// const Layout = ({children}) => {
-//   return (
-//     <>
-//     <Header/>
-//     {
-//         children
-//     }
-//     <Footer/>
-//     </>
-//   )
-// }
+export default Layout;

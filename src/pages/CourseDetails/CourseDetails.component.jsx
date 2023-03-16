@@ -26,11 +26,18 @@ import { GrCertificate } from "react-icons/gr";
 // react-tabs
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+//  sal animation
+import sal from "sal.js";
+import "../../assets/scss/default/_sal.scss";
 
 
 
 // 
 const CourseDetails = () => {
+  useEffect(() => {
+    sal();
+  }, []);
+
   const { courseName } = useParams();
   console.log(courseName);
 
@@ -66,24 +73,23 @@ const CourseDetails = () => {
     <CourseDetailsStyled>
       <div className="heading-wrapper" ref={headingRef}>
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center text-center">
             <div className="col-lg-8 col-md-11">
-              <h1 className="title">
-                Suni İntellekt dərslərimiz ilə sahənin mütəxəssisi ol!
+              <h1 className="title" data-sal="slide-up" data-sal-delay="300" data-sal-duration="800">
+                Süni İntellekt dərslərimiz ilə sahənin mütəxəssisi ol!
               </h1>
             </div>
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className="row">
           <div className="col-lg-9">
             <div className="course-details-content">
-              <div className="image-wrapper">
+              <div className="image-wrapper" data-sal="fade" data-sal-duration="500">
                 <img src={CourseDetailsMainIMG} alt="course-details" />
               </div>
-              <div className="tabs-wrapper">
+              <div className="tabs-wrapper" data-sal="fade" data-sal-duration="800">
                 <Tabs>
                   <TabList>
                     <Tab>
@@ -110,7 +116,7 @@ const CourseDetails = () => {
 
                   <TabPanel>
                     <div className="description-tab-wrapper">
-                      <h3 className="title">Süni intellekt nədir?</h3>
+                      <h3 className="title">Süni İntellekt nədir?</h3>
                       <p>
                         Süni İntellekt sahəsi sürətlə inkişaf edən sahələrdən
                         biridir. Müasir dövrümüzün texnoloji inkişafını nəzərdən
@@ -127,7 +133,7 @@ const CourseDetails = () => {
                       </p>
                       <br />
                       <br />
-                      <h3 className="title">Niyə süni intellekt?</h3>
+                      <h3 className="title">Niyə Süni İntellekt?</h3>
                       <p>
                         Süni İntellekt sahəsi sürətlə inkişaf edən sahələrdən
                         biridir. Müasir dövrümüzün texnoloji inkişafını nəzərdən
@@ -311,7 +317,6 @@ const CourseDetails = () => {
                       </div>
                     </div>
                   </TabPanel>
-
                   <TabPanel>
                     <div className="instructors">
                       <div className="instructor">
@@ -396,7 +401,7 @@ const CourseDetails = () => {
           </div>
           <div className="col-lg-3">
             <div className="course-details-sidebar">
-              <div className="widget-box course-features">
+              <div className="widget-box course-features" data-sal="slide-left" data-sal-delay="200" data-sal-duration="800">
                 <h5>Course Features</h5>
                 <ul className="features-list">
                   <li className="feature">
@@ -433,7 +438,7 @@ const CourseDetails = () => {
                 </CustomButton>
               </div>
 
-              <div className="widget-box course-certification">
+              <div className="widget-box course-certification" data-sal="slide-left" data-sal-delay="200" data-sal-duration="800">
                 <h5 className="title">Sertifikatlar</h5>
                 <div className="certificate-item">
                   <div className="image-wrapper">
@@ -457,7 +462,7 @@ const CourseDetails = () => {
                 </div>
               </div>
 
-              <div className="widget-box other-courses">
+              <div className="widget-box other-courses" data-sal="slide-left" data-sal-delay="200" data-sal-duration="800">
                 <h5 className="title">Digər Kurslarımız</h5>
 
                 <ul className="courses-list">
@@ -505,7 +510,6 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-
       <CtaArea/>
     </CourseDetailsStyled>
   );
