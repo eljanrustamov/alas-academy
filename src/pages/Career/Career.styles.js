@@ -86,7 +86,6 @@ export const CareerStyled = styled.div`
   .CareerJobs {
     background-color: var(--color-body-2);
     padding: 80px 0;
-    margin-bottom: 500px;
 
     .heading {
       margin-bottom: 56px;
@@ -148,7 +147,128 @@ export const CareerStyled = styled.div`
         margin: 20px 0;
       }
     }
-
-
   }
+
+  .CareerGraduates {
+    padding: 80px 0;
+    position: relative;
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .title {
+        margin-bottom: 16px;
+        span {
+          color: var(--color-primary);
+        }
+      }
+      p {
+        margin-top: 16px;
+        color: var(--color-body);
+      }
+    }
+
+    .swiper {
+      padding: 100px 0;
+
+      .slider-item {
+        background-color: var(--color-body-2);
+        padding: 32px;
+        position: relative;
+        border-radius: 16px;
+
+        .graduate-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 107px;
+          height: 107px;
+          position: absolute;
+          right: 32px;
+          top: -53px;
+          background-color: #fff;
+          border-radius: 50%;
+          border-top-left-radius: 20px;
+          padding: 14px;
+
+          img {
+            width: 80px;
+          }
+        }
+
+        .graduate-heading {
+          margin-top: 16px;
+          margin-bottom: 24px;
+          h6 {
+            font-size: 24px;
+            font-weight: 700;
+          }
+          p {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            gap: 8px;
+          }
+        }
+
+        .graduate-text {
+          font-size: 14px;
+          color: var(--color-body);
+        }
+      }
+    }
+
+    .slider-navigations {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      position: relative;
+
+      .btn {
+        width: 50px;
+        height: 50px;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        padding: 10px;
+        transition: 0.3s all;
+
+        &.swiper-button-disabled {
+          background-color: var(--color-body-2);
+          color: var(--color-header);
+          opacity: 1;
+        }
+        &.swiper-button-prev {
+          &::after {
+            display: none;
+          }
+        }
+
+        &.swiper-button-next {
+          left: 70px;
+          &::after {
+            display: none;
+          }
+        }
+
+        &:hover {
+          color: var(--color-white);
+          background-color: var(--color-primary);
+        }
+      }
+
+      .line {
+        width: calc(100% - 140px);
+        height: 1px;
+        background-color: var(--color-body-2);
+      }
+    }
+  }
+
 `;
