@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import GirlIMG from "../../assets/img/hero.webp";
 import StudentsIMG from "../../assets/img/students2.png";
 import { HeroStyled } from "./Hero.styles";

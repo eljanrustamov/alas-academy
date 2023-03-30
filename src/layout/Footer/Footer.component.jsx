@@ -1,12 +1,10 @@
 import React from "react";
 import { FooterStyled } from "./Footer.styles";
 import Logo from "../../assets/img/alas-logo.png";
-import CustomButton from "../../components/CustomButton/CustomButton.component";
 
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
@@ -120,10 +118,9 @@ const Footer = () => {
 
                   <div
                     className="footer-google-map"
-                    style={{ width: "100%", marginTop: "25px" }}
                   >
                     <iframe
-                      title="map"
+                      title="google-footer-map"
                       width="100%"
                       height="150"
                       src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=Baku,%20Caspian%20Plaza+(Caspian%20Plaza)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"

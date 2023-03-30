@@ -1,7 +1,7 @@
 import React from "react";
 import TeamInstructor from "../TeamInstructor/TeamInstructor.component";
 import { TeamStyled } from "./Team.styles";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import Instructor01 from "../../assets/img/instructor-frontend.jpeg";
 import Instructor02 from "../../assets/img/instructor-backend.jfif";
 import Instructor03 from "../../assets/img/instructor-data.jfif";

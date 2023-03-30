@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AboutStyled } from "./About.styles";
 import AboutMain from "../../assets/img/about-main.jpg";
 import AboutVideoBack from "../../assets/img/about-02.webp";
-import { FaPlay, FaRegCheckCircle } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 import ModalVideo from "react-modal-video";

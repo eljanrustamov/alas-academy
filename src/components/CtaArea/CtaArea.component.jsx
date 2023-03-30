@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import CustomButton from "../CustomButton/CustomButton.component";
 import { CtaAreaStyled } from "./CtaArea.styles";
 

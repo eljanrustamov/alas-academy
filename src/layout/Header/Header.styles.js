@@ -140,11 +140,10 @@ export const HeaderStyled = styled.div`
 `;
 
 export const DropdownContent = styled.ul`
-  width: 290px !important;
-  min-width: 300px;
+  min-width: ${({minWidth}) => minWidth}px;
   border: none;
   border-radius: 0 !important;
-  padding: 20px 0;
+  padding: 15px 0;
   box-shadow: 0 10px 40px rgb(0 0 0 / 8%);
   position: absolute;
   top: 35px;
@@ -152,9 +151,9 @@ export const DropdownContent = styled.ul`
   background-color: var(--color-white);
 
   li {
-    padding: 10px 30px;
+    padding: 10px 20px;
     line-height: initial;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
 
     a {

@@ -5,7 +5,6 @@ import StudentIMG01 from "../../assets/img/student01.jpg";
 import StudentIMG02 from "../../assets/img/student02.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TbQuote } from "react-icons/tb";
-import { FaStar } from "react-icons/fa";
 import { Autoplay } from "swiper";
 
 // Import Swiper styles

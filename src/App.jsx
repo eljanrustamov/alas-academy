@@ -10,6 +10,7 @@ import "./assets/scss/default/_sal.scss";
 import Loading from "./components/Loading/Loading.component";
 import Layout from "./layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
+import Career from "./pages/Career/Career";
 const Main = loadable(() => import("./pages/Main"), {fallback: <Loading/>,});
 const CourseDetails = loadable(() => pMinDelay(import("./pages/CourseDetails/CourseDetails.component"),1000),{ fallback: <Loading/>,});
 const Contact = loadable(() => import("./pages/Contact/Contact"), {fallback: <Loading/>,});
@@ -29,6 +30,7 @@ function App() {
             path="tedris-proqramlarimiz/:courseName"
             element={<CourseDetails />}
           />
+          <Route path="karyera" element={<Career />} />
           <Route path="elaqe" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

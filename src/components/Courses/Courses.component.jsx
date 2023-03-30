@@ -58,7 +58,7 @@ const category_contents = {
   ],
 };
 
-const { title, subtitle, category_items } = category_contents;
+const { title, category_items } = category_contents;
 
 const Courses = () => {
 

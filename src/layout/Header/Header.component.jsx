@@ -13,7 +13,6 @@ import Logo from "../../assets/img/alas-logo.png";
 import "reactjs-popup/dist/index.css";
 import { NavLink, useHref } from "react-router-dom";
 
-
 const subMenuAnimate = {
   enter: {
     y: 10,
@@ -43,11 +42,14 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const { isSticky } = UseSticky();
-  const [isHover, toggleHover] = useState(false);
+  const [isHoverCourses, toggleHoverCourses] = useState(false);
+  const [isHoverAbout, toggleHoverAbout] = useState(false);
+
   const [isPageMain, setIsPageMain] = useState(false);
   const to = useHref();
 
-  const toggleHoverMenu = () => toggleHover(!isHover);
+  const toggleHoverMenuCourses = () => toggleHoverCourses(!isHoverCourses);
+  const toggleHoverMenuAbout = () => toggleHoverAbout(!isHoverAbout);
 
   useEffect(() => {
     setIsPageMain(to === "/");
@@ -75,10 +77,11 @@ const Header = () => {
                   Ana Səhifə
                 </NavLink>
               </li>
+
               <motion.li
                 className="menu-itemdropdown"
-                onHoverStart={toggleHoverMenu}
-                onHoverEnd={toggleHoverMenu}
+                onHoverStart={toggleHoverMenuCourses}
+                onHoverEnd={toggleHoverMenuCourses}
               >
                 <a href="#courses">
                   Tədris Proqramlarımız <FaAngleDown />
@@ -86,10 +89,10 @@ const Header = () => {
                 <motion.div
                   className="dropdown"
                   initial="exit"
-                  animate={isHover ? "enter" : "exit"}
+                  animate={isHoverCourses ? "enter" : "exit"}
                   variants={subMenuAnimate}
                 >
-                  <DropdownContent>
+                  <DropdownContent minWidth={"270"}>
                     <li>
                       <NavLink
                         to="/tedris-proqramlarimiz/suni-intellekt"
@@ -141,6 +144,34 @@ const Header = () => {
                   </DropdownContent>
                 </motion.div>
               </motion.li>
+
+              <motion.li
+                className="menu-itemdropdown"
+                onHoverStart={toggleHoverMenuAbout}
+                onHoverEnd={toggleHoverMenuAbout}
+              >
+                <a href="#about">
+                  Haqqımızda <FaAngleDown />
+                </a>
+                <motion.div
+                  className="dropdown"
+                  initial="exit"
+                  animate={isHoverAbout ? "enter" : "exit"}
+                  variants={subMenuAnimate}
+                >
+                  <DropdownContent minWidth={"160"}>
+                    <li>
+                      <NavLink
+                        to="/karyera"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                      >
+                        Karyera
+                      </NavLink>
+                    </li>
+                  </DropdownContent>
+                </motion.div>
+              </motion.li>
+
               <li className="menu-item">
                 <a href="/#about">Haqqımızda</a>
               </li>

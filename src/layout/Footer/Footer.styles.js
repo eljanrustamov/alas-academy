@@ -4,7 +4,7 @@ export const FooterStyled = styled.div`
   .footer-top {
     position: relative;
     padding: 100px 0 95px;
-    background-color: #F0F4F5;
+    background-color: #f0f4f5;
     overflow-x: hidden;
     .footer-widget {
       font-size: 15px;
@@ -45,12 +45,12 @@ export const FooterStyled = styled.div`
           margin-top: 11px;
           transition: 0.3s all;
           cursor: pointer;
-          
+
           &:hover {
             color: var(--color-primary);
           }
 
-          a{
+          a {
             color: var(--bs-body-color);
           }
         }
@@ -59,8 +59,8 @@ export const FooterStyled = styled.div`
       &.explore {
         margin-left: 65px;
 
-        @media (max-width:991px){
-            margin-left: 0;
+        @media (max-width: 991px) {
+          margin-left: 0;
         }
       }
 
@@ -68,45 +68,45 @@ export const FooterStyled = styled.div`
         margin-left: 0;
       }
 
-      &.contacts{
+      &.contacts {
+        .footer-subscription-form {
+          margin-bottom: 35px;
+          input {
+            box-shadow: none;
 
-        .footer-subscription-form{
-            margin-bottom: 35px;
-            input{
-                box-shadow:none;
-
-                &:focus{
-                    border:1px solid rgb(198 93 35 / 45%);
-                }
+            &:focus {
+              border: 1px solid rgb(198 93 35 / 45%);
             }
+          }
         }
 
-        .social-share{
-            display: flex;
+        .social-share {
+          display: flex;
 
-            li{
-                margin: 0 15px;
+          li {
+            margin: 0 15px;
 
-                .icon-facebook{
-                    color:var(--color-facebook);
-                }
-                .icon-linkedin{
-                    color:var(--color-linkedin);
-
-                }
-                .icon-instagram{
-                    color:var(--color-instagram);
-
-                }
-                .icon-twitter{
-                    color:var(--color-twitter);
-
-                }
-                .icon-youtube{
-                    color:var(--color-youtube);
-
-                }
+            .icon-facebook {
+              color: var(--color-facebook);
             }
+            .icon-linkedin {
+              color: var(--color-linkedin);
+            }
+            .icon-instagram {
+              color: var(--color-instagram);
+            }
+            .icon-twitter {
+              color: var(--color-twitter);
+            }
+            .icon-youtube {
+              color: var(--color-youtube);
+            }
+          }
+        }
+
+        .footer-google-map {
+          width: "100%";
+          margin-top: "25px";
         }
       }
     }
