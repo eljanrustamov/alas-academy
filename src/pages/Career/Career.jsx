@@ -1,14 +1,14 @@
-import React from 'react'
-import {CareerStyled} from './Career.styles'
+import React from "react";
+import { CareerStyled } from "./Career.styles";
+import CareerHero from "./CareerHero.component";
+
 
 const Career = () => {
   return (
     <CareerStyled>
-    
-    <h1>Karyera</h1>
-    
+      <CareerHero/>
     </CareerStyled>
-  )
-}
+  );
+};
 
-export default Career
+export default Career;

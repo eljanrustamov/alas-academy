@@ -150,7 +150,7 @@ const Header = () => {
                 onHoverStart={toggleHoverMenuAbout}
                 onHoverEnd={toggleHoverMenuAbout}
               >
-                <a href="#about">
+                <a href="/#about">
                   Haqqımızda <FaAngleDown />
                 </a>
                 <motion.div
@@ -171,10 +171,6 @@ const Header = () => {
                   </DropdownContent>
                 </motion.div>
               </motion.li>
-
-              <li className="menu-item">
-                <a href="/#about">Haqqımızda</a>
-              </li>
 
               <li className="menu-item">
                 <NavLink
