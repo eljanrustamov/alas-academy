@@ -13,7 +13,8 @@ import { OffcanvasStyled } from "./Offcanvas.styles";
 import { NavLink } from "react-router-dom";
 
 const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   return (
     <OffcanvasStyled>
@@ -41,15 +42,23 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
             <li>
               <NavLink to="/">Ana Səhifə</NavLink>
             </li>
-            <li>
-              <a href="/#about">Haqqımızda</a>
+
+            <li className={`has-dropdown${isAboutDropdownOpen ? " active" : ""}`}>
+              <a href="/#about" onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}>
+                Haqqımızda {isAboutDropdownOpen ? <SlArrowDown size={12}/> : <SlArrowUp size={12}/>}{" "}
+              </a>
+              <ul class={`submenu${isAboutDropdownOpen ? " active" : ""}`}>
+                <li>
+                  <NavLink to="/karyera">Karyera</NavLink>
+                </li>
+              </ul>
             </li>
 
-            <li className={`has-dropdown${isDropdownOpen ? " active" : ""}`}>
-              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                Kurslar {isDropdownOpen ? <SlArrowDown size={12}/> : <SlArrowUp size={12}/>}{" "}
+            <li className={`has-dropdown${isCoursesDropdownOpen ? " active" : ""}`}>
+              <button onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}>
+                Kurslar {isCoursesDropdownOpen ? <SlArrowDown size={12}/> : <SlArrowUp size={12}/>}{" "}
               </button>
-              <ul class={`submenu${isDropdownOpen ? " active" : ""}`}>
+              <ul class={`submenu${isCoursesDropdownOpen ? " active" : ""}`}>
                 <li>
                   <NavLink to="/tedris-proqramlarimiz/suni-intellekt">Süni İntellekt</NavLink>
                 </li>

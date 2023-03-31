@@ -12,6 +12,7 @@ const Career = () => {
       <CareerJobs />
       <CareerGraduates />
       <CareerJobiBot/>
+      <CareerJobs />
     </CareerStyled>
   );
 };

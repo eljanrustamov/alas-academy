@@ -73,7 +73,7 @@ export const OffcanvasStyled = styled.div`
       }
 
       li.has-dropdown {
-        button{
+        button, a{
             display: flex;
             align-items: center;
             justify-content: space-between;
