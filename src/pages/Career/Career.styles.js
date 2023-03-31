@@ -271,4 +271,37 @@ export const CareerStyled = styled.div`
     }
   }
 
+  .CareerJobiBot{
+    padding: 180px 0;
+
+    .content{
+      .title{
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        span{
+          color: var(--color-primary);
+        }
+      }
+
+      p{
+        margin-top: 24px;
+        font-size: 18px;
+        color: var(--color-body);
+      }
+
+      a{
+        margin-top: 24px;
+      }
+    }
+
+    .img-banner{
+      width: 450px;
+      height: 340px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+
 `;
