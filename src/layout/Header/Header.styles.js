@@ -7,6 +7,7 @@ export const HeaderStyled = styled.div`
     margin-top: 90px;
   }
 
+
   .header-navbar {
     display: flex;
     justify-content: space-between;

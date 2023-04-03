@@ -37,7 +37,7 @@ const counter_data = [
 const Counterup = () => {
 
 
-  console.log(counter_data[0].number);
+  // console.log(counter_data[0].number);
 
   return (
     <CounterupStyled>

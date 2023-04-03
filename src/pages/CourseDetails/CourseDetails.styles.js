@@ -2,26 +2,17 @@ import styled from "styled-components";
 
 export const CourseDetailsStyled = styled.div`
   margin-bottom: 240px;
+  margin-top:50px;
 
-  .heading-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 120px 0;
-    color: var(--color-white);
-    margin-bottom: 100px;
 
-    @media (max-width: 565px) {
-    }
-  }
 
   .course-details-content {
     .image-wrapper {
-      max-width: 976px;
-      /* height: 672px; */
+      max-width:976px;
 
       img {
-        max-width: 100%;
-        
+        width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -224,7 +215,7 @@ export const CourseDetailsStyled = styled.div`
                 height: 90px;
                 margin-bottom: 25px;
 
-                img{
+                img {
                   height: 100%;
                 }
               }
@@ -240,14 +231,19 @@ export const CourseDetailsStyled = styled.div`
 
           // tab
           .instructors {
+            display: flex;
+            justify-content:space-between;
             .instructor {
               display: flex;
+              flex-direction:column;
               justify-content: center;
               align-items: center;
+              text-align:center;
               margin-bottom: 50px;
               .thumbnail-wrapper {
                 position: relative;
-                min-width: 170px;
+                width: 170px;
+                height: 170px;
                 cursor: pointer;
                 margin-right: 20px;
 
@@ -316,6 +312,7 @@ export const CourseDetailsStyled = styled.div`
               }
 
               .content-wrapper {
+                margin-top:25px;
                 .title {
                   font-family: var(--font-secondary);
                   font-size: 20px;
@@ -461,7 +458,7 @@ export const CourseDetailsStyled = styled.div`
             padding: 0 10px;
             font-size: 15px;
 
-            a{
+            a {
               color: var(--color-primary) !important;
             }
           }

@@ -1,7 +1,11 @@
-import React, {useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import pMinDelay from 'p-min-delay';
+
+import { useSelector, useDispatch } from "react-redux";
+import { addCourse } from "./components/Courses/coursesSlice";
+
+import pMinDelay from "p-min-delay";
 import loadable from "@loadable/component";
 //  sal animation
 import sal from "sal.js";
@@ -11,14 +15,39 @@ import Loading from "./components/Loading/Loading.component";
 import Layout from "./layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
 import Career from "./pages/Career/Career";
-const Main = loadable(() => import("./pages/Main"), {fallback: <Loading/>,});
-const CourseDetails = loadable(() => pMinDelay(import("./pages/CourseDetails/CourseDetails.component"),1000),{ fallback: <Loading/>,});
-const Contact = loadable(() => import("./pages/Contact/Contact"), {fallback: <Loading/>,});
+import CourseDetails from "./pages/CourseDetails/CourseDetails.component";
+const Main = loadable(() => import("./pages/Main"), { fallback: <Loading /> });
+
+const Contact = loadable(() => import("./pages/Contact/Contact"), {
+  fallback: <Loading />,
+});
 
 function App() {
+
+  const dispatch = useDispatch();
+  
+
   useEffect(() => {
     sal();
-  }, []);
+    const getCoursesData = async () => {
+      try {
+        let response = await fetch(
+          "https://alasacademy.azurewebsites.net/api/Course/GetCourses"
+        );
+        const data = await response.json();
+
+        console.log(data.items);
+        if (data) {
+          dispatch(addCourse(data.items));
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCoursesData();
+
+  }, [dispatch]);
+
 
   return (
     <div className="App">

@@ -11,8 +11,8 @@ import UseSticky from "../../hooks/use-sticky";
 import Logo from "../../assets/img/alas-logo.png";
 
 import "reactjs-popup/dist/index.css";
-import { NavLink, useHref } from "react-router-dom";
-
+import { NavLink, useHref, useNavigate } from "react-router-dom";
+import sal from "sal.js";
 const subMenuAnimate = {
   enter: {
     y: 10,
@@ -46,6 +46,9 @@ const Header = () => {
   const [isHoverAbout, toggleHoverAbout] = useState(false);
 
   const [isPageMain, setIsPageMain] = useState(false);
+
+ 
+
   const to = useHref();
 
   const toggleHoverMenuCourses = () => toggleHoverCourses(!isHoverCourses);
@@ -160,14 +163,16 @@ const Header = () => {
                   variants={subMenuAnimate}
                 >
                   <DropdownContent minWidth={"160"}>
-                    <li>
-                      <NavLink
-                        to="/karyera"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                      >
-                        Karyera
-                      </NavLink>
-                    </li>
+                    {
+                    //   <li>
+                    //   <NavLink
+                    //     to="/karyera"
+                    //     className={({ isActive }) => (isActive ? "active" : "")}
+                    //   >
+                    //     Karyera
+                    //   </NavLink>
+                    // </li>
+                    }
                   </DropdownContent>
                 </motion.div>
               </motion.li>
