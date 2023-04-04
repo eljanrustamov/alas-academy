@@ -34,20 +34,21 @@ const Contact = () => {
             <div className="contact-info">
               <h2 className="title">Bizimlə Əlaqə</h2>
               <p className="subtitle">
-                Lorem ipsum dolor sit amet ipsum dolor sit ?
+                - Aşağıda qeyd olunan məlumatlar vasitəsiylə bizimlə əlaqə saxlaya bilərsiniz.
               </p>
               <ul className="ci-list">
                 <li>
                   <h5>Address</h5>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>Nizami m., Caspian plaza 16 m.</p>
                 </li>
                 <li>
                   <h5>Email</h5>
-                  <p>info@tfug.az</p>
+                  <p>admin@alas.edu.az</p>
                 </li>
                 <li>
                   <h5>Telefon</h5>
                   <p>+994 (55) 533 53 60</p>
+                  <p>+994 (55) 533 53 56</p>
                 </li>
               </ul>
               <ul className="social-share">
@@ -78,9 +79,9 @@ const Contact = () => {
           <div className="offset-xl-2 col-lg-6">
             <div className="contact-form">
               <div className="form-title-wrapper">
-                <h4>Get In Touch</h4>
+                <h4>Sualınız və ya təklifiniz var?</h4>
                 <p>
-                  Fill out this form for booking a consultant advising session.
+                  Aşağıdakı xanaları dolduraraq bizimlə əlaqə saxlaya bilərsiniz       
                 </p>
               </div>
               <form onSubmit={handleSubmit}>
