@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from '../../assets/img/alas-logo.png'
+import Logo from "../../assets/img/alas-logo.png";
 import Drawer from "react-modern-drawer";
 import { CgClose } from "react-icons/cg";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
@@ -26,13 +26,13 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
         <div className="header-top">
           <div className="logo">
             <NavLink to="/">
-              <img src={Logo} alt="logo"/>
+              <img src={Logo} alt="logo" />
             </NavLink>
           </div>
 
           <div className="close-menu" onClick={() => setIsOffcanvasOpen(false)}>
             <button className="close-button">
-              <CgClose size={18}/>
+              <CgClose size={18} />
             </button>
           </div>
         </div>
@@ -43,39 +43,80 @@ const Offcanvas = ({ isOffcanvasOpen, setIsOffcanvasOpen }) => {
               <NavLink to="/">Ana Səhifə</NavLink>
             </li>
 
-            <li className={`has-dropdown${isAboutDropdownOpen ? " active" : ""}`}>
-              <a href="/#about" onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}>
-                Haqqımızda {isAboutDropdownOpen ? <SlArrowDown size={12}/> : <SlArrowUp size={12}/>}{" "}
+            <li
+              className={`has-dropdown${isAboutDropdownOpen ? " active" : ""}`}
+            >
+              <a
+                href="/#about"
+                onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
+              >
+                Haqqımızda{" "}
+                {isAboutDropdownOpen ? (
+                  <SlArrowDown size={12} />
+                ) : (
+                  <SlArrowUp size={12} />
+                )}{" "}
               </a>
-              <ul class={`submenu${isAboutDropdownOpen ? " active" : ""}`}>
-                <li>
-                  <NavLink to="/karyera">Karyera</NavLink>
-                </li>
-              </ul>
+              {
+                //   <ul class={`submenu${isAboutDropdownOpen ? " active" : ""}`}>
+                //   <li>
+                //     <NavLink to="/karyera">Karyera</NavLink>
+                //   </li>
+                // </ul>
+              }
             </li>
 
-            <li className={`has-dropdown${isCoursesDropdownOpen ? " active" : ""}`}>
-              <button onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}>
-                Kurslar {isCoursesDropdownOpen ? <SlArrowDown size={12}/> : <SlArrowUp size={12}/>}{" "}
+            <li
+              className={`has-dropdown${
+                isCoursesDropdownOpen ? " active" : ""
+              }`}
+            >
+              <button
+                onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
+              >
+                Kurslar{" "}
+                {isCoursesDropdownOpen ? (
+                  <SlArrowDown size={12} />
+                ) : (
+                  <SlArrowUp size={12} />
+                )}{" "}
               </button>
               <ul class={`submenu${isCoursesDropdownOpen ? " active" : ""}`}>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/suni-intellekt">Süni İntellekt</NavLink>
+                  <a href="/tedris-proqramlarimiz/suni-intellekt">
+                    Süni İntellekt
+                  </a>
                 </li>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/data-science">Data Science</NavLink>
+                  <div
+                    href="/tedris-proqramlarimiz/data-science"
+                    style={{ cursor: "default", color: "var(--color-body)" }}
+                  >
+                    Data Science
+                  </div>
                 </li>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/data-analitika">Data Analytics</NavLink>
+                  <div
+                    href="/tedris-proqramlarimiz/data-analitika"
+                    style={{ cursor: "default", color: "var(--color-body)" }}
+                  >
+                    Data Analitika
+                  </div>
                 </li>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/kiber-tehlukesizlik">Cyber Security</NavLink>
+                  <a href="/tedris-proqramlarimiz/kiber-tehlukesizlik">
+                    Kiber Təhlükəsizlik
+                  </a>
                 </li>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/backend-proqramlasdirma">Back-End Development</NavLink>
+                  <a href="/tedris-proqramlarimiz/backend-proqramlashdirma">
+                    Back-End Proqramlaşdırma
+                  </a>
                 </li>
                 <li>
-                  <NavLink to="/tedris-proqramlarimiz/frontend-proqramlasdirma">Front-End Development</NavLink>
+                  <a href="/tedris-proqramlarimiz/frontend-proqramlashdirma">
+                    Front-End Proqramlaşdırma
+                  </a>
                 </li>
               </ul>
             </li>

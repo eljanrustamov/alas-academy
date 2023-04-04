@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CourseDetailsStyled = styled.div`
   margin-bottom: 240px;
-  margin-top:50px;
+  padding-top:50px;
 
 
 
@@ -365,6 +365,7 @@ export const CourseDetailsStyled = styled.div`
 
     .course-features {
       h5 {
+        font-weight:700;
         font-family: var(--font-primary);
         margin-bottom: 16px;
       }

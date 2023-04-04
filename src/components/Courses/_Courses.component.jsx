@@ -97,41 +97,31 @@ const Courses = () => {
         </div>
 
         <div className="row g-5">
-          <div
-            className="col-lg-4 col-md-6"
-            data-sal-delay={`${category_items[0].delay}`}
-            data-sal="slide-up"
-            data-sal-duration="800"
-          >
+          {courseData.map((course, index) => (
             <div
-              onClick={() => {
-                navigate(`/tedris-proqramlarimiz/suni-intellekt`);
-              }}
-              className={`course-item ${category_items[0].color}`}
+              className="col-lg-4 col-md-6"
+              data-sal-delay={`${category_items[index].delay}`}
+              data-sal="slide-up"
+              data-sal-duration="800"
+              key={index}
             >
-              <div className="icon">{category_items[0].icon}</div>
-              <div className="content">
-                <p>Süni İntellekt</p>
+              <div
+                onClick={() => {
+                  navigate(`/tedris-proqramlarimiz/${course.pathName}`, {
+                    state: {
+                      id: course.id,
+                    },
+                  });
+                }}
+                className={`course-item ${category_items[index].color}`}
+              >
+                <div className="icon">{category_items[index].icon}</div>
+                <div className="content">
+                  <p>{course.name}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div
-            className="col-lg-4 col-md-6"
-            data-sal-delay={`${category_items[1].delay}`}
-            data-sal="slide-up"
-            data-sal-duration="800"
-          >
-            <div
-              className={`course-item ${category_items[1].color}`}
-              style={{ cursor: "default" }}
-            >
-              <div className="icon">{category_items[1].icon}</div>
-              <div className="content">
-                <p>Data Science (Tezliklə)</p>
-              </div>
-            </div>
-          </div>
+          ))}
 
           <div
             className="col-lg-4 col-md-6"
@@ -152,57 +142,17 @@ const Courses = () => {
 
           <div
             className="col-lg-4 col-md-6"
-            data-sal-delay={`${category_items[3].delay}`}
+            data-sal-delay={`${category_items[1].delay}`}
             data-sal="slide-up"
             data-sal-duration="800"
           >
             <div
-              onClick={() => {
-                navigate(`/tedris-proqramlarimiz/kiber-tehlukesizlik`);
-              }}
-              className={`course-item ${category_items[3].color}`}
+              className={`course-item ${category_items[1].color}`}
+              style={{ cursor: "default" }}
             >
-              <div className="icon">{category_items[3].icon}</div>
+              <div className="icon">{category_items[1].icon}</div>
               <div className="content">
-                <p>Kiber Təhlükəsizlik</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-4 col-md-6"
-            data-sal-delay={`${category_items[4].delay}`}
-            data-sal="slide-up"
-            data-sal-duration="800"
-          >
-            <div
-              onClick={() => {
-                navigate(`/tedris-proqramlarimiz/frontend-proqramlashdirma`);
-              }}
-              className={`course-item ${category_items[4].color}`}
-            >
-              <div className="icon">{category_items[4].icon}</div>
-              <div className="content">
-                <p>Front-End Proqramlaşdırma</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="col-lg-4 col-md-6"
-            data-sal-delay={`${category_items[5].delay}`}
-            data-sal="slide-up"
-            data-sal-duration="800"
-          >
-            <div
-              onClick={() => {
-                navigate(`/tedris-proqramlarimiz/backend-proqramlashdirma`);
-              }}
-              className={`course-item ${category_items[5].color}`}
-            >
-              <div className="icon">{category_items[5].icon}</div>
-              <div className="content">
-                <p>Back-End Proqramlaşdırma</p>
+                <p>Data Science (Tezliklə)</p>
               </div>
             </div>
           </div>

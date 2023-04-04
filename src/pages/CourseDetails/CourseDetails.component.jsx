@@ -5,7 +5,10 @@ import CtaArea from "../../components/CtaArea/CtaArea.component";
 import CustomButton from "../../components/CustomButton/CustomButton.component";
 //
 import CourseDetailsMainIMG from "../../assets/img/course-details-m.jpg";
-import CourseWidgetIMG01 from "../../assets/img/course-widget-1.jpeg";
+import CourseWidgetBack from "../../assets/img/widget-back.png";
+import CourseWidgetAI from "../../assets/img/widget-ai.png";
+import CourseWidgetFront from "../../assets/img/widget-front.png";
+import CourseWidgetCC from "../../assets/img/widget-cc.png";
 import InstructorIMG01 from "../../assets/img/course-instructor-1.jpg";
 import InstructorIMG02 from "../../assets/img/course-instructor-2.jpg";
 import InstructorIMG03 from "../../assets/img/course-instructor-3.jpg";
@@ -36,40 +39,196 @@ import "../../assets/scss/default/_sal.scss";
 import { Helmet } from "react-helmet";
 import Loading from "../../components/Loading/Loading.component";
 
-//
-import parse from "html-react-parser";
+const OtherCourses = ({ courseName }) => {
+  return (
+    <React.Fragment>
+      {courseName !== "suni-intellekt" ? (
+        <li className="course">
+          <img src={CourseWidgetAI} alt="course" />
+          <div className="course-info">
+            <h6>Süni İntellekt</h6>
+            <a href={"/tedris-proqramlarimiz/suni-intellekt"}>Ətraflı...</a>
+          </div>
+        </li>
+      ) : (
+        ""
+      )}
+      {courseName !== "kiber-tehlukesizlik" ? (
+        <li className="course">
+          <img src={CourseWidgetCC} alt="course" />
+          <div className="course-info">
+            <h6>Kiber Təhlükəsizlik</h6>
+            <a href={"/tedris-proqramlarimiz/kiber-tehlukesizlik"}>
+              Ətraflı...
+            </a>
+          </div>
+        </li>
+      ) : (
+        ""
+      )}
+
+      {courseName !== "backend-proqramlashdirma" ? (
+        <li className="course">
+          <img src={CourseWidgetBack} alt="course" />
+          <div className="course-info">
+            <h6>Back-End Proqramlaşdırma</h6>
+            <a href={"/tedris-proqramlarimiz/backend-proqramlashdirma"}>
+              Ətraflı...
+            </a>
+          </div>
+        </li>
+      ) : (
+        ""
+      )}
+
+      {courseName !== "frontend-proqramlashdirma" ? (
+        <li className="course">
+          <img src={CourseWidgetFront} alt="course" />
+          <div className="course-info">
+            <h6>Front-End Proqramlaşdırma</h6>
+            <a href={"/tedris-proqramlarimiz/frontend-proqramlashdirma"}>
+              Ətraflı...
+            </a>
+          </div>
+        </li>
+      ) : (
+        ""
+      )}
+    </React.Fragment>
+  );
+};
+
+const CourseCertificates = ({ courseName }) => {
+  return (
+    <React.Fragment>
+      {courseName === "suni-intellekt" && (
+        <React.Fragment>
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={Certificate3} alt="certificate" />
+            </div>
+            <p className="text">TensorFlow</p>
+          </div>
+
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={Certificate2} alt="certificate" />
+            </div>
+            <p className="text">AWS ML Specialty</p>
+          </div>
+
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={Certificate1} alt="certificate" />
+            </div>
+            <p className="text">AWS Cloud Practitioner</p>
+          </div>
+        </React.Fragment>
+      )}
+      {courseName === "kiber-tehlukesizlik" && (
+        <React.Fragment>
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={CertificateOscp} alt="certificate" />
+            </div>
+            <p className="text">OSCP</p>
+          </div>
+        </React.Fragment>
+      )}
+      {courseName === "frontend-proqramlashdirma" && (
+        <div className="certificate-item">
+          <div className="image-wrapper">
+            <img src={CertificateGoogle} alt="certificate" />
+          </div>
+          <p className="text">Google Developer Certificate</p>
+        </div>
+      )}
+      {courseName === "backend-proqramlashdirma" && (
+        <React.Fragment>
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={CertificateGoogle} alt="certificate" />
+            </div>
+            <p className="text">Google Developer Certificate</p>
+          </div>
+
+          <div className="certificate-item">
+            <div className="image-wrapper">
+              <img src={Certificate1} alt="certificate" />
+            </div>
+            <p className="text">Cloud Practitioner</p>
+          </div>
+        </React.Fragment>
+      )}
+    </React.Fragment>
+  );
+};
 
 //
 const CourseDetails = () => {
   const [course, setCourse] = useState({});
   const { state } = useLocation();
-  // const { courseName } = useParams();
+  const { courseName } = useParams();
   const [loading, setLoading] = useState(true);
+  // const [currentCourseId, setCurrentCourseId] = useState(0);
+  let currentCourseId = 0;
 
-  const getCourseData = async () => {
+  const getCurrentCourseId = async (course) => {
     try {
       const res = await fetch(
-        `https://alasacademy.azurewebsites.net/api/Course/GetCourseById?id=${state.id}`
+        `https://alasacademy.azurewebsites.net/api/Course/GetCourses`
       );
       const data = await res.json();
 
-      if (data) setCourse(data);
+      if (data) {
+        currentCourseId = data.items.find(
+          (course) => course.pathName === courseName
+        ).id;
+        console.log(data);
+      }
     } catch (error) {
       console.log(error);
-      throw new Error("");
+    }
+  };
+
+  const getCourseData = async () => {
+    const id = currentCourseId ? currentCourseId : state?.id;
+    console.log(id + " data cekiliyor");
+    try {
+      const res = await fetch(
+        `https://alasacademy.azurewebsites.net/api/Course/GetCourseById?id=${id}`
+      );
+      const data = await res.json();
+
+      if (data) {
+        setCourse(data);
+        sal();
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
   useEffect(() => {
-    getCourseData()
-      .then(() => {
-        sal();
-        setLoading(false);
-      })
-      .catch(() => {});
+    if (state?.id) {
+      getCourseData()
+        .then(() => {
+          sal();
+          setLoading(false);
+        })
+        .catch(() => {});
+    } else {
+      console.log("id yok");
+      getCurrentCourseId()
+        .then(() => {
+          getCourseData().then(() => {
+            sal();
+            setLoading(false);
+          });
+        })
+        .catch(() => {});
+    }
   }, []);
-
-  console.log(course);
 
   return loading ? (
     <Loading />
@@ -998,7 +1157,7 @@ const CourseDetails = () => {
                 data-sal-delay="200"
                 data-sal-duration="800"
               >
-                <h5>Course Features</h5>
+                <h5>Kurs haqqında</h5>
                 <ul className="features-list">
                   <li className="feature">
                     <span>
@@ -1041,26 +1200,8 @@ const CourseDetails = () => {
                 data-sal-duration="800"
               >
                 <h5 className="title">Sertifikatlar</h5>
-                <div className="certificate-item">
-                  <div className="image-wrapper">
-                    <img src={Certificate3} alt="certificate" />
-                  </div>
-                  <p className="text">TensorFlow</p>
-                </div>
 
-                <div className="certificate-item">
-                  <div className="image-wrapper">
-                    <img src={Certificate2} alt="certificate" />
-                  </div>
-                  <p className="text">AWS ML Specialty</p>
-                </div>
-
-                <div className="certificate-item">
-                  <div className="image-wrapper">
-                    <img src={Certificate1} alt="certificate" />
-                  </div>
-                  <p className="text">AWS Cloud Practitioner</p>
-                </div>
+                <CourseCertificates courseName={courseName} />
               </div>
 
               <div
@@ -1072,57 +1213,7 @@ const CourseDetails = () => {
                 <h5 className="title">Digər Kurslarımız</h5>
 
                 <ul className="courses-list">
-                  <li className="course">
-                    <img src={CourseWidgetIMG01} alt="course" />
-                    <div className="course-info">
-                      <h6>Data Science</h6>
-                      <Link to={"/tedris-proqramlarimiz/data-science"}>
-                        Ətraflı...
-                      </Link>
-                    </div>
-                  </li>
-
-                  <li className="course">
-                    <img src={CourseWidgetIMG01} alt="course" />
-                    <div className="course-info">
-                      <h6>Data Analitika</h6>
-                      <Link to={"/tedris-proqramlarimiz/data-analitika"}>
-                        Ətraflı...
-                      </Link>
-                    </div>
-                  </li>
-
-                  <li className="course">
-                    <img src={CourseWidgetIMG01} alt="course" />
-                    <div className="course-info">
-                      <h6>Kiber Təhlükəsizlik</h6>
-                      <Link to={"/tedris-proqramlarimiz/kiber-tehlukesizlik"}>
-                        Ətraflı...
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="course">
-                    <img src={CourseWidgetIMG01} alt="course" />
-                    <div className="course-info">
-                      <h6>Back-End Proqramlaşdırma</h6>
-                      <Link
-                        to={"/tedris-proqramlarimiz/backend-proqramlasdirma"}
-                      >
-                        Ətraflı...
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="course">
-                    <img src={CourseWidgetIMG01} alt="course" />
-                    <div className="course-info">
-                      <h6>Front-End Proqramlaşdırma</h6>
-                      <Link
-                        to={"/tedris-proqramlarimiz/frontend-proqramlasdirma"}
-                      >
-                        Ətraflı...
-                      </Link>
-                    </div>
-                  </li>
+                  {<OtherCourses courseName={courseName} />}
                 </ul>
               </div>
             </div>
@@ -1135,40 +1226,3 @@ const CourseDetails = () => {
 };
 
 export default CourseDetails;
-
-// <TabPanel>
-// <div className='description-tab-wrapper'>
-//   <h3 className="title">Süni İntellekt nədir?</h3>
-//   <p>
-//     Süni İntellekt sahəsi sürətlə inkişaf edən sahələrdən
-//     biridir. Müasir dövrümüzün texnoloji inkişafını nəzərdən
-//     keçirdikdə, süni intellektin inkişafı nəticəsində ərsəyə
-//     gəlmiş yenilikləri görmək olar. Yüksək gəlir, tələbat və
-//     artmaqda olan iş fürsətləri süni intellektə olan marağın
-//     başlıca səbəblərindəndir. Süni intellektə yiyələnməklə,
-//     yüksək statuslu şirkətlərdə işləmək imkanı əldə
-//     edirsiniz. Süni intellekti öyrənməklə təkcə bilik yox,
-//     problem həll etmə bacarığı, ətrafınızdakı dünyaya fərqli
-//     bir baxış qazanırsınız. Təxminlərə görə süni intellekt
-//     cari və növbəti onilliyin aparıcı sahələrin siyahısında
-//     yerləşir.
-//   </p>
-//   <br />
-//   <br />
-//   <h3 className="title">Niyə Süni İntellekt?</h3>
-//   <p>
-//     Süni İntellekt sahəsi sürətlə inkişaf edən sahələrdən
-//     biridir. Müasir dövrümüzün texnoloji inkişafını nəzərdən
-//     keçirdikdə, süni intellektin inkişafı nəticəsində ərsəyə
-//     gəlmiş yenilikləri görmək olar. Yüksək gəlir, tələbat və
-//     artmaqda olan iş fürsətləri süni intellektə olan marağın
-//     başlıca səbəblərindəndir. Süni intellektə yiyələnməklə,
-//     yüksək statuslu şirkətlərdə işləmək imkanı əldə
-//     edirsiniz. Süni intellekti öyrənməklə təkcə bilik yox,
-//     problem həll etmə bacarığı, ətrafınızdakı dünyaya fərqli
-//     bir baxış qazanırsınız. Təxminlərə görə süni intellekt
-//     cari və növbəti onilliyin aparıcı sahələrin siyahısında
-//     yerləşir.
-//   </p>
-// </div>
-// </TabPanel>

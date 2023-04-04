@@ -7,7 +7,6 @@ export const HeaderStyled = styled.div`
     margin-top: 90px;
   }
 
-
   .header-navbar {
     display: flex;
     justify-content: space-between;
@@ -141,7 +140,7 @@ export const HeaderStyled = styled.div`
 `;
 
 export const DropdownContent = styled.ul`
-  min-width: ${({minWidth}) => minWidth}px;
+  min-width: ${({ minWidth }) => minWidth}px;
   border: none;
   border-radius: 0 !important;
   padding: 15px 0;
@@ -150,16 +149,18 @@ export const DropdownContent = styled.ul`
   top: 35px;
   left: 0;
   background-color: var(--color-white);
+  cursor: default;
 
   li {
     padding: 10px 20px;
     line-height: initial;
     font-size: 14px;
-    cursor: pointer;
+    cursor: default;
 
     a {
       color: initial;
       outline: none;
+      cursor: pointer;
     }
     &:hover {
       a {

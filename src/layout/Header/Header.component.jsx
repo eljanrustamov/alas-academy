@@ -47,8 +47,6 @@ const Header = () => {
 
   const [isPageMain, setIsPageMain] = useState(false);
 
- 
-
   const to = useHref();
 
   const toggleHoverMenuCourses = () => toggleHoverCourses(!isHoverCourses);
@@ -97,52 +95,46 @@ const Header = () => {
                 >
                   <DropdownContent minWidth={"270"}>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/suni-intellekt"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                      >
+                      <a href="/tedris-proqramlarimiz/suni-intellekt">
                         Süni İntellekt
-                      </NavLink>
+                      </a>
                     </li>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/data-science"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                      <div
+                        href="/tedris-proqramlarimiz/data-science"
+                        style={{
+                          cursor: "default",
+                          color: "var(--color-body)",
+                        }}
                       >
                         Data Science
-                      </NavLink>
+                      </div>
                     </li>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/data-analitika"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                      <div
+                        href="/tedris-proqramlarimiz/data-analitika"
+                        style={{
+                          cursor: "default",
+                          color: "var(--color-body)",
+                        }}
                       >
                         Data Analitika
-                      </NavLink>
+                      </div>
                     </li>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/kiber-tehlukesizlik"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                      >
+                      <a href="/tedris-proqramlarimiz/kiber-tehlukesizlik">
                         Kiber Təhlükəsizlik
-                      </NavLink>
+                      </a>
                     </li>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/backend-proqramlasdirma"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                      >
+                      <a href="/tedris-proqramlarimiz/backend-proqramlashdirma">
                         Back-End Proqramlaşdırma
-                      </NavLink>
+                      </a>
                     </li>
                     <li>
-                      <NavLink
-                        to="/tedris-proqramlarimiz/frontend-proqramlasdirma"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                      >
+                      <a href="/tedris-proqramlarimiz/frontend-proqramlashdirma">
                         Front-End Proqramlaşdırma
-                      </NavLink>
+                      </a>
                     </li>
                   </DropdownContent>
                 </motion.div>
@@ -154,27 +146,30 @@ const Header = () => {
                 onHoverEnd={toggleHoverMenuAbout}
               >
                 <a href="/#about">
-                  Haqqımızda <FaAngleDown />
+                  Haqqımızda 
+                  {
+                    // <FaAngleDown />
+                  }
                 </a>
-                <motion.div
-                  className="dropdown"
-                  initial="exit"
-                  animate={isHoverAbout ? "enter" : "exit"}
-                  variants={subMenuAnimate}
-                >
-                  <DropdownContent minWidth={"160"}>
-                    {
-                    //   <li>
-                    //   <NavLink
-                    //     to="/karyera"
-                    //     className={({ isActive }) => (isActive ? "active" : "")}
-                    //   >
-                    //     Karyera
-                    //   </NavLink>
-                    // </li>
-                    }
-                  </DropdownContent>
-                </motion.div>
+                {
+                  // <motion.div
+                  //   className="dropdown"
+                  //   initial="exit"
+                  //   animate={isHoverAbout ? "enter" : "exit"}
+                  //   variants={subMenuAnimate}
+                  // >
+                  //   <DropdownContent minWidth={"160"}>
+                  //     //   <li>
+                  //     //   <NavLink
+                  //     to="/karyera"
+                  //     className={({ isActive }) => (isActive ? "active" : "")}
+                  //   >
+                  //     Karyera
+                  //   </NavLink>
+                  // </li>
+                  //   </DropdownContent>
+                  // </motion.div>
+                }
               </motion.li>
 
               <li className="menu-item">
