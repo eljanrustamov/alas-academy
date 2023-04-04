@@ -595,16 +595,23 @@ const CourseDetails = () => {
                           <ul>
                             Proqrama daxildir:
                             <li>
-                              <GiCheckMark size={15} /> Python Fundamental
+                              <GiCheckMark size={15} /> Networking Fundamentals
+
                             </li>
                             <li>
-                              <GiCheckMark size={15} />
-                              SQL
+                              <GiCheckMark size={15} /> Python Fundamentals
+                              Linux Fundamentals:
+
+                            </li>
+                            <li>
+                              <GiCheckMark size={15} /> Linux Fundamentals
+                            </li>
+                            <li>
+                              <GiCheckMark size={15} /> OSCP
                             </li>
                           </ul>
                           <p>
-                            Proqram çərçivəsində TensorFlow, AWS Cloud
-                            Practitioner və AWS ML Specialty sertifikatları üzrə
+                            Proqram çərçivəsində OSCP üzrə
                             bilik qazanırsınız. (Sertifikatlar hissəsinə keçid
                             edərək, daha ətraflı məlumat əldə edə bilərsiniz.)
                           </p>
