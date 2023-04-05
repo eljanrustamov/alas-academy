@@ -36,7 +36,6 @@ function App() {
         );
         const data = await response.json();
 
-        console.log(data.items);
         if (data) {
           dispatch(addCourse(data.items));
         }

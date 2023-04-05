@@ -32,9 +32,6 @@ import { GrCertificate } from "react-icons/gr";
 // react-tabs
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-//  sal animation
-import sal from "sal.js";
-import "../../assets/scss/default/_sal.scss";
 //
 import { Helmet } from "react-helmet";
 import Loading from "../../components/Loading/Loading.component";
@@ -183,7 +180,6 @@ const CourseDetails = () => {
         currentCourseId = data.items.find(
           (course) => course.pathName === courseName
         ).id;
-        sal();
       }
     } catch (error) {
       console.log(error);
@@ -192,7 +188,6 @@ const CourseDetails = () => {
 
   const getCourseData = async () => {
     const id = currentCourseId ? currentCourseId : state?.id;
-    console.log(id + " data cekiliyor");
     try {
       const res = await fetch(
         `https://alasacademy.azurewebsites.net/api/Course/GetCourseById?id=${id}`
@@ -201,7 +196,6 @@ const CourseDetails = () => {
 
       if (data) {
         setCourse(data);
-        sal();
       }
     } catch (error) {
       console.log(error);
@@ -209,20 +203,16 @@ const CourseDetails = () => {
   };
 
   useEffect(() => {
-    sal();
     if (state?.id) {
       getCourseData()
         .then(() => {
-          sal();
           setLoading(false);
         })
         .catch(() => {});
     } else {
-      console.log("id yok");
       getCurrentCourseId()
         .then(() => {
           getCourseData().then(() => {
-            sal();
             setLoading(false);
           });
         })
@@ -244,15 +234,11 @@ const CourseDetails = () => {
             <div className="course-details-content">
               <div
                 className="image-wrapper"
-                data-sal="fade"
-                data-sal-duration="500"
               >
                 <img src={course.image} alt="course-details" />
               </div>
               <div
                 className="tabs-wrapper"
-                data-sal="fade"
-                data-sal-duration="800"
               >
                 <Tabs>
                   <TabList>
@@ -1160,9 +1146,6 @@ const CourseDetails = () => {
             <div className="course-details-sidebar">
               <div
                 className="widget-box course-features"
-                data-sal="slide-left"
-                data-sal-delay="200"
-                data-sal-duration="800"
               >
                 <h5>Kurs haqqında</h5>
                 <ul className="features-list">
@@ -1202,9 +1185,6 @@ const CourseDetails = () => {
 
               <div
                 className="widget-box course-certification"
-                data-sal="slide-left"
-                data-sal-delay="200"
-                data-sal-duration="800"
               >
                 <h5 className="title">Sertifikatlar</h5>
 
@@ -1213,9 +1193,6 @@ const CourseDetails = () => {
 
               <div
                 className="widget-box other-courses"
-                data-sal="slide-left"
-                data-sal-delay="200"
-                data-sal-duration="800"
               >
                 <h5 className="title">Digər Kurslarımız</h5>
 
