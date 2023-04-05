@@ -11,9 +11,6 @@ const CtaArea = () => {
           <div className="col-lg-7">
             <div
               className="section-title"
-              data-sal-delay="150"
-              data-sal="slide-up"
-              data-sal-duration="800"
             >
               <h2 className="title">
                 Tədris proqramına qoşul, <span>beynəlxalq sertifikat</span> əldə
