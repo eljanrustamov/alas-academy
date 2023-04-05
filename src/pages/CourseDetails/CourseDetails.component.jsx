@@ -170,7 +170,6 @@ const CourseDetails = () => {
   const { state } = useLocation();
   const { courseName } = useParams();
   const [loading, setLoading] = useState(true);
-  // const [currentCourseId, setCurrentCourseId] = useState(0);
   let currentCourseId = 0;
 
   const getCurrentCourseId = async (course) => {
@@ -184,7 +183,7 @@ const CourseDetails = () => {
         currentCourseId = data.items.find(
           (course) => course.pathName === courseName
         ).id;
-        console.log(data);
+        sal();
       }
     } catch (error) {
       console.log(error);
@@ -210,6 +209,7 @@ const CourseDetails = () => {
   };
 
   useEffect(() => {
+    sal();
     if (state?.id) {
       getCourseData()
         .then(() => {
