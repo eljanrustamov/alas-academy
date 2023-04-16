@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
   return (
     <FooterStyled>
       <div className="footer-top">
@@ -34,7 +35,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      <span>Email:</span> info@tfugaz.org
+                      <span>Email:</span> info@alas.edu.az
                     </li>
                   </ul>
                 </div>
@@ -44,12 +45,28 @@ const Footer = () => {
               <div className="footer-widget explore">
                 <h4 className="widget-title">Tədris Proqramları</h4>
                 <ul className="footer-link">
-                  <li>Süni İntellekt</li>
+                  <li>
+                    <a href="/tedris-proqramlarimiz/suni-intellekt">
+                      Süni İntellekt
+                    </a>
+                  </li>
                   <li>Data Science</li>
                   <li>Data Analitika</li>
-                  <li>Kiber Təhlükəsizlik</li>
-                  <li>Back-End Proqramlaşdırma</li>
-                  <li>Front-End Proqramlaşdırma</li>
+                  <li>
+                    <a href="/tedris-proqramlarimiz/kiber-tehlukesizlik">
+                      Kiber Təhlükəsizlik
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/tedris-proqramlarimiz/backend-proqramlashdirma">
+                      Back-End Proqramlaşdırma
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/tedris-proqramlarimiz/frontend-proqramlashdirma">
+                      Front-End Proqramlaşdırma
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -116,9 +133,7 @@ const Footer = () => {
                     </li>
                   </ul>
 
-                  <div
-                    className="footer-google-map"
-                  >
+                  <div className="footer-google-map">
                     <iframe
                       title="google-footer-map"
                       width="100%"

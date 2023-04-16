@@ -22,7 +22,7 @@ const HeaderTopBar = () => {
         <li>
           <a href="/">
             <MdEmail size={18} />
-            admin@alas.edu.az
+            info@alas.edu.az
           </a>
         </li>
 

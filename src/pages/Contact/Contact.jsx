@@ -19,7 +19,7 @@ const Contact = () => {
       message: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      console.log(values)      
     },
   });
 
@@ -43,7 +43,7 @@ const Contact = () => {
                 </li>
                 <li>
                   <h5>Email</h5>
-                  <p>admin@alas.edu.az</p>
+                  <p>info@alas.edu.az</p>
                 </li>
                 <li>
                   <h5>Telefon</h5>

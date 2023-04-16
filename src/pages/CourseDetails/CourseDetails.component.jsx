@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { CourseDetailsStyled } from "./CourseDetails.styles";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import CtaArea from "../../components/CtaArea/CtaArea.component";
 import CustomButton from "../../components/CustomButton/CustomButton.component";
 //
-import CourseDetailsMainIMG from "../../assets/img/course-details-m.jpg";
 import CourseWidgetBack from "../../assets/img/widget-back.png";
 import CourseWidgetAI from "../../assets/img/widget-ai.png";
 import CourseWidgetFront from "../../assets/img/widget-front.png";
@@ -220,6 +219,15 @@ const CourseDetails = () => {
     }
   }, []);
 
+  const options = {
+    // react-html-parser'ın seçenekleri
+    replace: (node) => {
+      if (node.name === "gicheckmark") {
+        return <GiCheckMark size={15} />;
+      }
+    },
+  };
+
   return loading ? (
     <Loading />
   ) : (
@@ -232,14 +240,10 @@ const CourseDetails = () => {
         <div className="row">
           <div className="col-lg-9">
             <div className="course-details-content">
-              <div
-                className="image-wrapper"
-              >
+              <div className="image-wrapper">
                 <img src={course.image} alt="course-details" />
               </div>
-              <div
-                className="tabs-wrapper"
-              >
+              <div className="tabs-wrapper">
                 <Tabs>
                   <TabList>
                     <Tab>
@@ -315,19 +319,20 @@ const CourseDetails = () => {
                           <ul>
                             Proqrama daxildir:
                             <li>
-                              <GiCheckMark size={15} /> Python Fundamental
+                              <GiCheckMark size={15} />
+                              <span>Python Fundamental</span>
                             </li>
                             <li>
                               <GiCheckMark size={15} />
-                              SQL
+                              <span>SQL</span>
                             </li>
                             <li>
                               <GiCheckMark size={15} />
-                              Xətti cəbr və statistika
+                              <span>Xətti cəbr və statistika</span>
                             </li>
                             <li>
                               <GiCheckMark size={15} />
-                              Machine Learning{" "}
+                              <span>Machine Learning</span>
                             </li>
                           </ul>
                           <p>
@@ -406,71 +411,30 @@ const CourseDetails = () => {
                       </TabPanel>
                       <TabPanel>
                         <div className="certificates-tab-wrapper">
-                          <div className="certificate-box">
-                            <div className="row">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img src={Certificate3} alt="certificate" />
+                          {course.certificates.map((certificate, index) => {
+                            return (
+                              <div className="certificate-box" key={index}>
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <div className="icon-wrapper">
+                                      <img
+                                        src={certificate.image}
+                                        alt="certificate"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-10">
+                                    <div className="content">
+                                      <h4 className="title">
+                                        {certificate.name}
+                                      </h4>
+                                      <p>{certificate.description}</p>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">TensorFlow</h4>
-                                  <p>
-                                    Machine Learning və Deep Learning sahəsində
-                                    olan biliklərinizi təsdiqləyən beynəlxalq
-                                    sertifikatdır. Qeyd etmək lazımdır ki, Alas
-                                    Academy Google ilə əməkdaşlıq çərçivisində
-                                    sertifikatlaşdırma prosesini həyata keçirən
-                                    yeganə mərkəzdir
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="certificate-box">
-                            <div className="row w-100">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img src={Certificate1} alt="certificate" />
-                                </div>
-                              </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">
-                                    AWS Cloud Practitioner
-                                  </h4>
-                                  <p>
-                                    Bulud texnologiyası üzrə başlanğıc əhəmiyyət
-                                    daşıyan sertifikatlardandır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="certificate-box">
-                            <div className="row">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img src={Certificate2} alt="certificate" />
-                                </div>
-                              </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">AWS ML Specialty</h4>
-                                  <p>
-                                    Machine Learning üzrə, ən yüksək dəyərə
-                                    malik sertifikatlardandır. Qeyd etmək
-                                    lazımdır ki, Alas Academy Amazonla
-                                    əməkdaşlıq çərçivədə Amazonun qafqazda
-                                    yeganə Tədris mərkəzi və User Groupudur.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            );
+                          })}
                         </div>
                       </TabPanel>
                       <TabPanel>
@@ -572,36 +536,37 @@ const CourseDetails = () => {
                         </div>
                       </TabPanel>
                       <TabPanel>
-                        <div className="curriculum-tab-wrapper">
-                          <h3 className="heading-title">Tədris Proqramı</h3>
-                          <p>
-                            Tədris proqramı 8 ay müddətində həyata keçir və
-                            aşağıdakı proqramlar əhatə olunacaqdır
-                          </p>
-                          <ul>
-                            Proqrama daxildir:
-                            <li>
-                              <GiCheckMark size={15} /> Networking Fundamentals
-
-                            </li>
-                            <li>
-                              <GiCheckMark size={15} /> Python Fundamentals
-                              Linux Fundamentals:
-
-                            </li>
-                            <li>
-                              <GiCheckMark size={15} /> Linux Fundamentals
-                            </li>
-                            <li>
-                              <GiCheckMark size={15} /> OSCP
-                            </li>
-                          </ul>
-                          <p>
-                            Proqram çərçivəsində OSCP üzrə
-                            bilik qazanırsınız. (Sertifikatlar hissəsinə keçid
-                            edərək, daha ətraflı məlumat əldə edə bilərsiniz.)
-                          </p>
-                        </div>
+                            <div className='curriculum-tab-wrapper'>
+                            <h3 className='heading-title'>Tədris Proqramı</h3>
+                            <p>
+                              Tədris proqramı 8 ay müddətində həyata keçir və
+                              aşağıdakı proqramlar əhatə olunacaqdır
+                            </p>
+                            <ul>
+                              Proqrama daxildir:
+                              <li>
+                                <GiCheckMark size={15}></GiCheckMark>
+                                <span>Networking Fundamentals</span>
+                              </li>
+                              <li>
+                                <GiCheckMark size={15}></GiCheckMark>
+                                <span>Python Fundamentals</span>
+                              </li>
+                              <li>
+                                <GiCheckMark size={15}></GiCheckMark>
+                                <span>Linux Fundamentals</span>
+                              </li>
+                              <li>
+                                <GiCheckMark size={15}></GiCheckMark>
+                                <span>OSCP</span>
+                              </li>
+                            </ul>
+                            <p>
+                              Proqram çərçivəsində OSCP üzrə
+                              bilik qazanırsınız. (Sertifikatlar hissəsinə keçid
+                              edərək, daha ətraflı məlumat əldə edə bilərsiniz.)
+                            </p>
+                          </div>
                       </TabPanel>
                       <TabPanel>
                         <div className="advantages-tab-wrapper">
@@ -671,30 +636,30 @@ const CourseDetails = () => {
                       </TabPanel>
                       <TabPanel>
                         <div className="certificates-tab-wrapper">
-                          <div className="certificate-box">
-                            <div className="row">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img
-                                    src={CertificateOscp}
-                                    alt="certificate"
-                                  />
+                          {course.certificates.map((certificate, index) => {
+                            return (
+                              <div className="certificate-box" key={index}>
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <div className="icon-wrapper">
+                                      <img
+                                        src={certificate.image}
+                                        alt="certificate"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-10">
+                                    <div className="content">
+                                      <h4 className="title">
+                                        {certificate.name}
+                                      </h4>
+                                      <p>{certificate.description}</p>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">OSCP</h4>
-                                  <p>
-                                    Kiber təhlükəsizlik üzrə dünyaca ən tanımış
-                                    sertifikatlardandır. OSCP Əsasən white-hat
-                                    hacking və penetration testing üzərində
-                                    fokuslanır və Offensive security sahəsində
-                                    böyük önəm daşıyır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            );
+                          })}
                         </div>
                       </TabPanel>
                       <TabPanel>
@@ -860,49 +825,30 @@ const CourseDetails = () => {
                       </TabPanel>
                       <TabPanel>
                         <div className="certificates-tab-wrapper">
-                          <div className="certificate-box">
-                            <div className="row">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img
-                                    src={CertificateGoogle}
-                                    alt="certificate"
-                                  />
+                          {course.certificates.map((certificate, index) => {
+                            return (
+                              <div className="certificate-box" key={index}>
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <div className="icon-wrapper">
+                                      <img
+                                        src={certificate.image}
+                                        alt="certificate"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-10">
+                                    <div className="content">
+                                      <h4 className="title">
+                                        {certificate.name}
+                                      </h4>
+                                      <p>{certificate.description}</p>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">
-                                    Google Developer Certificate
-                                  </h4>
-                                  <p>
-                                    Bu sertifikat sizin JavaScript
-                                    proqramlaşdırma dili üzrə biliyinizi təsdiq
-                                    edən beynəlxalq sertifikatdır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="certificate-box">
-                            <div className="row w-100">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img src={Certificate1} alt="certificate" />
-                                </div>
-                              </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">Cloud Practitioner</h4>
-                                  <p>
-                                    Bulud texnologiyası üzrə başlanğıc əhəmiyyət
-                                    daşıyan sertifikatlardandır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            );
+                          })}
                         </div>
                       </TabPanel>
                       <TabPanel>
@@ -1068,49 +1014,30 @@ const CourseDetails = () => {
                       </TabPanel>
                       <TabPanel>
                         <div className="certificates-tab-wrapper">
-                          <div className="certificate-box">
-                            <div className="row">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img
-                                    src={CertificateGoogle}
-                                    alt="certificate"
-                                  />
+                          {course.certificates.map((certificate, index) => {
+                            return (
+                              <div className="certificate-box" key={index}>
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <div className="icon-wrapper">
+                                      <img
+                                        src={certificate.image}
+                                        alt="certificate"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-md-10">
+                                    <div className="content">
+                                      <h4 className="title">
+                                        {certificate.name}
+                                      </h4>
+                                      <p>{certificate.description}</p>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">
-                                    Google Developer Certificate
-                                  </h4>
-                                  <p>
-                                    Bu sertifikat sizin JavaScript
-                                    proqramlaşdırma dili üzrə biliyinizi təsdiq
-                                    edən beynəlxalq sertifikatdır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="certificate-box">
-                            <div className="row w-100">
-                              <div className="col-md-2">
-                                <div className="icon-wrapper">
-                                  <img src={Certificate1} alt="certificate" />
-                                </div>
-                              </div>
-                              <div className="col-md-10">
-                                <div className="content">
-                                  <h4 className="title">Cloud Practitioner</h4>
-                                  <p>
-                                    Bulud texnologiyası üzrə başlanğıc əhəmiyyət
-                                    daşıyan sertifikatlardandır.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                            );
+                          })}
                         </div>
                       </TabPanel>
                       <TabPanel>
@@ -1144,9 +1071,7 @@ const CourseDetails = () => {
           </div>
           <div className="col-lg-3">
             <div className="course-details-sidebar">
-              <div
-                className="widget-box course-features"
-              >
+              <div className="widget-box course-features">
                 <h5>Kurs haqqında</h5>
                 <ul className="features-list">
                   <li className="feature">
@@ -1183,17 +1108,13 @@ const CourseDetails = () => {
                 </CustomButton>
               </div>
 
-              <div
-                className="widget-box course-certification"
-              >
+              <div className="widget-box course-certification">
                 <h5 className="title">Sertifikatlar</h5>
 
                 <CourseCertificates courseName={courseName} />
               </div>
 
-              <div
-                className="widget-box other-courses"
-              >
+              <div className="widget-box other-courses">
                 <h5 className="title">Digər Kurslarımız</h5>
 
                 <ul className="courses-list">

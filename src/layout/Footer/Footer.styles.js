@@ -44,14 +44,15 @@ export const FooterStyled = styled.div`
         li {
           margin-top: 11px;
           transition: 0.3s all;
-          cursor: pointer;
-
-          &:hover {
-            color: var(--color-primary);
-          }
+          color: var(--color-body);
 
           a {
             color: var(--bs-body-color);
+            cursor: pointer;
+
+            &:hover {
+              color: var(--color-primary);
+            }
           }
         }
       }
