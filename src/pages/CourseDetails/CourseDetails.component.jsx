@@ -243,6 +243,7 @@ const CourseDetails = () => {
               <div className="image-wrapper">
                 <img src={course.image} alt="course-details" />
               </div>
+              
               <div className="tabs-wrapper">
                 <Tabs>
                   <TabList>
@@ -267,6 +268,7 @@ const CourseDetails = () => {
                       Təlimçilər
                     </Tab>
                   </TabList>
+                  
                   {course.pathName === "suni-intellekt" ? (
                     <React.Fragment>
                       <TabPanel>

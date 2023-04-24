@@ -32,9 +32,11 @@ export const AboutStyled = styled.div`
         border-radius: 10px;
         box-shadow: 0px 40px 70px rgba(27, 20, 78, 0.1);
         .thumb {
+          max-width: 220px;
           position: relative;
           text-align: center;
           img {
+            width: 100%;
             border-radius: 6px;
           }
           .popup-icon {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AboutStyled } from "./About.styles";
 import AboutMain from "../../assets/img/about-main.jpg";
-import AboutVideoBack from "../../assets/img/about-02.webp";
+import AboutVideoCover from "../../assets/img/about-video-cover.jpg";
 import { FaPlay } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
@@ -25,7 +25,7 @@ const About = () => {
               >
                 <div className="inner">
                   <div className="thumb">
-                    <img src={AboutVideoBack} alt="About" />
+                    <img src={AboutVideoCover} alt="About" />
                     <div
                       className="popup-icon"
                       onClick={() => setIsVideoOpen(true)}

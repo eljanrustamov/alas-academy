@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
 import { CoursesStyled } from "./Courses.styles";
 import { GiBrain } from "react-icons/gi";
 import { GoDatabase } from "react-icons/go";
 import { BsClipboardData } from "react-icons/bs";
 import { MdSecurity } from "react-icons/md";
 import { BiCodeAlt, BiCodeBlock } from "react-icons/bi";
-import { NavLink, useNavigate } from "react-router-dom";
-import sal from "sal.js";
+import { useNavigate } from "react-router-dom";
 
 const category_items = [
   {
@@ -55,8 +53,10 @@ const category_items = [
 ];
 
 const Courses = () => {
-  const [courseData, setCourseData] = useState([]);
   const navigate = useNavigate();
+
+  /* 
+  const [courseData, setCourseData] = React.useState([]);
   const getCoursesData = async () => {
     try {
       let response = await fetch(
@@ -65,20 +65,20 @@ const Courses = () => {
       const data = await response.json();
 
       if (data) {
-        setCourseData(data.items);
+        // setCourseData(data.items);
       }
     } catch (error) {
       throw new Error("Bir şeylər səhv oldu.");
     }
   };
-
-  useEffect(() => {
+  React.useEffect(() => {
     getCoursesData()
       .then((data) => {
         sal();
       })
       .catch((error) => console.log(error.message));
   }, []);
+  */
 
   return (
     <CoursesStyled id="courses">
